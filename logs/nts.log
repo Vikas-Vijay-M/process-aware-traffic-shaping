@@ -1,0 +1,19 @@
+2026-03-23 20:25:52,829 - root - INFO - Logging initialized with level DEBUG to directory ./logs
+2026-03-23 20:25:52,829 - __main__ - INFO - Starting dry run mode. Press Ctrl+C to exit.
+2026-03-23 20:25:52,829 - __main__ - INFO - Stats: captured_packets=0, sent_packets=0, dropped_packets=0, errors=0, captured_bytes=0, sent_bytes=0, dropped_bytes=0
+2026-03-23 20:25:53,847 - __main__ - INFO - Stats: captured_packets=0, sent_packets=0, dropped_packets=0, errors=0, captured_bytes=0, sent_bytes=0, dropped_bytes=0
+2026-03-23 20:25:54,850 - __main__ - INFO - Stats: captured_packets=0, sent_packets=0, dropped_packets=0, errors=0, captured_bytes=0, sent_bytes=0, dropped_bytes=0
+2026-03-23 20:25:55,851 - __main__ - INFO - Stats: captured_packets=0, sent_packets=0, dropped_packets=0, errors=0, captured_bytes=0, sent_bytes=0, dropped_bytes=0
+2026-03-23 20:25:56,853 - __main__ - INFO - Stats: captured_packets=0, sent_packets=0, dropped_packets=0, errors=0, captured_bytes=0, sent_bytes=0, dropped_bytes=0
+2026-03-23 20:25:57,853 - __main__ - INFO - Stats: captured_packets=0, sent_packets=0, dropped_packets=0, errors=0, captured_bytes=0, sent_bytes=0, dropped_bytes=0
+2026-03-23 20:25:58,854 - __main__ - INFO - Stats: captured_packets=0, sent_packets=0, dropped_packets=0, errors=0, captured_bytes=0, sent_bytes=0, dropped_bytes=0
+2026-03-23 20:25:59,856 - __main__ - INFO - Stats: captured_packets=0, sent_packets=0, dropped_packets=0, errors=0, captured_bytes=0, sent_bytes=0, dropped_bytes=0
+2026-03-23 20:26:00,856 - __main__ - INFO - Stats: captured_packets=0, sent_packets=0, dropped_packets=0, errors=0, captured_bytes=0, sent_bytes=0, dropped_bytes=0
+2026-03-23 20:26:01,857 - __main__ - INFO - Stats: captured_packets=0, sent_packets=0, dropped_packets=0, errors=0, captured_bytes=0, sent_bytes=0, dropped_bytes=0
+2026-03-23 20:26:02,190 - __main__ - INFO - Ctrl+C received. Shutting down gracefully.
+2026-03-23 20:26:50,767 - root - INFO - Logging initialized with level DEBUG to directory ./logs
+2026-03-23 20:26:50,768 - __main__ - INFO - Starting dry run mode. Press Ctrl+C to exit.
+2026-03-23 20:26:50,768 - __main__ - INFO - Stats: captured_packets=0, sent_packets=0, dropped_packets=0, errors=0, captured_bytes=0, sent_bytes=0, dropped_bytes=0
+2026-03-23 20:26:51,768 - __main__ - INFO - Stats: captured_packets=0, sent_packets=0, dropped_packets=0, errors=0, captured_bytes=0, sent_bytes=0, dropped_bytes=0
+2026-03-23 20:26:52,770 - __main__ - INFO - Stats: captured_packets=0, sent_packets=0, dropped_packets=0, errors=0, captured_bytes=0, sent_bytes=0, dropped_bytes=0
+2026-03-23 20:26:52,827 - __main__ - INFO - Ctrl+C received. Shutting down gracefully.

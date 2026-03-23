@@ -1,0 +1,2 @@
+# This file can be used to specify project dependencies.
+# For now, it is empty as there are no external dependencies.

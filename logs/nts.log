@@ -17,3 +17,19 @@
 2026-03-23 20:26:51,768 - __main__ - INFO - Stats: captured_packets=0, sent_packets=0, dropped_packets=0, errors=0, captured_bytes=0, sent_bytes=0, dropped_bytes=0
 2026-03-23 20:26:52,770 - __main__ - INFO - Stats: captured_packets=0, sent_packets=0, dropped_packets=0, errors=0, captured_bytes=0, sent_bytes=0, dropped_bytes=0
 2026-03-23 20:26:52,827 - __main__ - INFO - Ctrl+C received. Shutting down gracefully.
+2026-03-23 21:11:37,329 - root - INFO - Logging initialized with level DEBUG to directory ./logs
+2026-03-23 21:11:37,329 - __main__ - INFO - Starting dry run mode. Press Ctrl+C to exit.
+2026-03-23 21:11:37,329 - __main__ - INFO - Stats: captured_packets=0, sent_packets=0, dropped_packets=0, errors=0, captured_bytes=0, sent_bytes=0, dropped_bytes=0
+2026-03-23 21:11:38,337 - __main__ - INFO - Stats: captured_packets=0, sent_packets=0, dropped_packets=0, errors=0, captured_bytes=0, sent_bytes=0, dropped_bytes=0
+2026-03-23 21:11:39,338 - __main__ - INFO - Stats: captured_packets=0, sent_packets=0, dropped_packets=0, errors=0, captured_bytes=0, sent_bytes=0, dropped_bytes=0
+2026-03-23 21:11:40,339 - __main__ - INFO - Stats: captured_packets=0, sent_packets=0, dropped_packets=0, errors=0, captured_bytes=0, sent_bytes=0, dropped_bytes=0
+2026-03-23 21:11:40,695 - __main__ - INFO - Ctrl+C received. Shutting down gracefully.
+2026-03-23 21:11:58,953 - root - INFO - Logging initialized with level DEBUG to directory ./logs
+2026-03-23 21:11:58,953 - __main__ - ERROR - This program must be run as Administrator to use WinDivert.
+2026-03-23 21:12:05,492 - root - INFO - Logging initialized with level DEBUG to directory ./logs
+2026-03-23 21:12:05,492 - __main__ - INFO - Application started. No operation specified (use --dry-run for a demo).
+2026-03-23 21:12:14,400 - root - INFO - Logging initialized with level DEBUG to directory ./logs
+2026-03-23 21:12:14,400 - __main__ - INFO - Starting dry run mode. Press Ctrl+C to exit.
+2026-03-23 21:12:14,400 - __main__ - INFO - Stats: captured_packets=0, sent_packets=0, dropped_packets=0, errors=0, captured_bytes=0, sent_bytes=0, dropped_bytes=0
+2026-03-23 21:12:15,412 - __main__ - INFO - Stats: captured_packets=0, sent_packets=0, dropped_packets=0, errors=0, captured_bytes=0, sent_bytes=0, dropped_bytes=0
+2026-03-23 21:12:16,390 - __main__ - INFO - Ctrl+C received. Shutting down gracefully.

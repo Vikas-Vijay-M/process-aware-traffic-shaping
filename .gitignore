@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# Virtual Environments
+.venv/
+venv/
+env/
+
+# Build and distribution
+dist/
+build/
+*.egg-info/
+
+# Logs
+logs/
+
+# VS Code
+# It's often useful to commit .vscode/settings.json to share project-specific settings.
+# You can uncomment the following line if you want to ignore the entire folder.
+#.vscode/
+
+# Windows specific
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# WinDivert binaries and drivers
+# These should be installed by the user, not committed to the repository.
+WinDivert.dll
+WinDivert64.sys
+WinDivert32.sys
+WinDivert.lib
+windivert*/
+
+# Large binary artifacts (specific to build outputs if possible)
+# Avoid committing large binaries. If you have other DLLs/libs that are part of your source,
+# adjust the patterns below or move them to a specific directory and ignore that.
+*.sys
+*.dll
+*.lib

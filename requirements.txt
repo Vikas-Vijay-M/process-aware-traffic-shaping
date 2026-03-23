@@ -1,2 +1,11 @@
 # This file can be used to specify project dependencies.
-# For now, it is empty as there are no external dependencies.
+
+# A Python wrapper for the WinDivert library is required for packet interception.
+# pydivert is a popular choice, but other wrappers may exist.
+# Example:
+# pydivert
+
+# psutil is an optional but recommended dependency for resolving process IDs (PIDs)
+# to process names, which is useful for logging and statistics.
+# psutil
+

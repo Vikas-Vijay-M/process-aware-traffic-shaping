@@ -6,6 +6,7 @@ import sys
 
 from nts.logging_setup import setup_logging
 from nts.stats import Stats
+from nts.admin import is_admin
 
 def main():
     """Main function."""
@@ -39,9 +40,14 @@ def main():
         logging.critical(f"Failed to set up logging: {e}", exc_info=True)
         sys.exit(1)
 
+    log = logging.getLogger(__name__)
+
+    if not args.dry_run and not is_admin():
+        log.error("This program must be run as Administrator to use WinDivert.")
+        sys.exit(2)
+
 
     stats = Stats()
-    log = logging.getLogger(__name__)
 
     if args.dry_run:
         log.info("Starting dry run mode. Press Ctrl+C to exit.")

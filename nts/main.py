@@ -1,6 +1,4 @@
-"""
-Main entry point for the NTS application.
-"""
+
 import argparse
 import logging
 import time

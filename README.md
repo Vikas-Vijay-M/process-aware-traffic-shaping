@@ -22,9 +22,20 @@ This project is a network utility.
 
 4.  **Install WinDivert:**
     This application requires WinDivert for network packet interception. The binaries are **not** included in this repository.
-    - Download the latest WinDivert package from the [official website](https://reqrypt.org/windivert.html).
-    - Extract the archive.
-    - Copy the `WinDivert64.dll` and `WinDivert64.sys` files to a location in your system's PATH, or into the `nts` directory of this project.
+    - Download the latest `WinDivert-2.2.2-A-x64.zip` (or newer) from the [official website](https://reqrypt.org/windivert.html).
+    - Create a directory named `windivert` in the root of this project.
+    - Extract the contents of the zip file and place `WinDivert.dll` and `WinDivert64.sys` into the `./windivert/` directory. The application will load them from this local path first.
+    
+    Your project structure should look like this:
+    ```
+    /
+    |-- nts/
+    |-- windivert/
+    |   |-- WinDivert.dll
+    |   `-- WinDivert64.sys
+    |-- README.md
+    ...
+    ```
 
 5.  **Verify Administrator Privileges:**
     You can check if your shell has administrator privileges by running:

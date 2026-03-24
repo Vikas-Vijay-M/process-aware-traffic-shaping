@@ -13,6 +13,8 @@ class Stats:
     captured_bytes: int = 0
     sent_bytes: int = 0
     dropped_bytes: int = 0
+    send_invalid_param_errors: int = 0
+    skipped_too_small_packets: int = 0
 
     def format(self) -> str:
         """Return a single-line summary string of the statistics."""

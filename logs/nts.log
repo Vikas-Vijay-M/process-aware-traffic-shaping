@@ -33,3 +33,2078 @@
 2026-03-23 21:12:14,400 - __main__ - INFO - Stats: captured_packets=0, sent_packets=0, dropped_packets=0, errors=0, captured_bytes=0, sent_bytes=0, dropped_bytes=0
 2026-03-23 21:12:15,412 - __main__ - INFO - Stats: captured_packets=0, sent_packets=0, dropped_packets=0, errors=0, captured_bytes=0, sent_bytes=0, dropped_bytes=0
 2026-03-23 21:12:16,390 - __main__ - INFO - Ctrl+C received. Shutting down gracefully.
+2026-03-23 21:25:10,432 - root - INFO - Logging initialized with level DEBUG to directory ./logs
+2026-03-23 21:25:10,432 - __main__ - INFO - Starting WinDivert smoke test.
+2026-03-23 21:25:10,445 - __main__ - INFO - Opening WinDivert with filter: 'outbound and (tcp or udp)'
+2026-03-23 21:25:10,445 - __main__ - DEBUG - WinDivert handle opened successfully.
+2026-03-23 21:25:10,445 - __main__ - INFO - WinDivert opened successfully. Running for 2.0 seconds...
+2026-03-23 21:25:12,447 - __main__ - INFO - WinDivert smoke test duration finished.
+2026-03-23 21:25:12,447 - __main__ - CRITICAL - An unexpected error occurred during the smoke test: 'WinDivert' object has no attribute 'closed'
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\main.py", line 81, in main
+    with WinDivertDriver(logger=log) as driver:
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 65, in __exit__
+    self.close()
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 51, in close
+    if self._handle and not self._handle.closed:
+                            ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WinDivert' object has no attribute 'closed'. Did you mean: 'close'?
+2026-03-23 21:25:54,048 - root - INFO - Logging initialized with level DEBUG to directory ./logs
+2026-03-23 21:25:54,048 - __main__ - INFO - Starting WinDivert smoke test.
+2026-03-23 21:25:54,064 - __main__ - INFO - Opening WinDivert with filter: 'outbound and (tcp or udp)'
+2026-03-23 21:25:54,064 - __main__ - DEBUG - WinDivert handle opened successfully.
+2026-03-23 21:25:54,064 - __main__ - INFO - WinDivert opened successfully. Running for 2.0 seconds...
+2026-03-23 21:25:56,070 - __main__ - INFO - WinDivert smoke test duration finished.
+2026-03-23 21:25:56,070 - __main__ - INFO - WinDivert smoke test succeeded.
+2026-03-23 21:34:39,700 - root - INFO - Logging initialized with level INFO to directory ./logs
+2026-03-23 21:34:39,700 - __main__ - INFO - Starting passthrough mode.
+2026-03-23 21:34:39,715 - __main__ - INFO - Opening WinDivert with filter: 'outbound and (tcp or udp)'
+2026-03-23 21:34:39,716 - __main__ - INFO - Passthrough engine started.
+2026-03-23 21:34:39,716 - __main__ - CRITICAL - Exceeded max consecutive errors (20). Stopping.
+2026-03-23 21:35:11,001 - root - INFO - Logging initialized with level INFO to directory ./logs
+2026-03-23 21:35:11,001 - __main__ - INFO - Starting passthrough mode.
+2026-03-23 21:35:11,017 - __main__ - INFO - Opening WinDivert with filter: 'outbound and (tcp or udp)'
+2026-03-23 21:35:11,017 - __main__ - INFO - Passthrough engine started.
+2026-03-23 21:35:11,017 - __main__ - CRITICAL - Exceeded max consecutive errors (20). Stopping.
+2026-03-23 21:35:11,017 - __main__ - INFO - Passthrough engine stopped.
+2026-03-23 21:35:24,174 - root - INFO - Logging initialized with level INFO to directory ./logs
+2026-03-23 21:35:24,174 - __main__ - INFO - Starting passthrough mode.
+2026-03-23 21:35:24,187 - __main__ - INFO - Opening WinDivert with filter: 'outbound and (tcp or udp)'
+2026-03-23 21:35:24,187 - __main__ - INFO - Passthrough engine started.
+2026-03-23 21:35:24,187 - __main__ - CRITICAL - Exceeded max consecutive errors (20). Stopping.
+2026-03-23 21:35:24,187 - __main__ - INFO - Passthrough engine stopped.
+2026-03-23 21:36:37,172 - root - INFO - Logging initialized with level DEBUG to directory ./logs
+2026-03-23 21:36:37,172 - __main__ - INFO - Starting passthrough mode.
+2026-03-23 21:36:37,187 - __main__ - INFO - Opening WinDivert with filter: 'outbound and (tcp or udp)'
+2026-03-23 21:36:37,187 - __main__ - DEBUG - WinDivert handle opened successfully.
+2026-03-23 21:36:37,187 - __main__ - INFO - Passthrough engine started.
+2026-03-23 21:36:37,187 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+2026-03-23 21:36:37,187 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 76, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:36:37,187 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+2026-03-23 21:36:37,187 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 76, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:36:37,187 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+2026-03-23 21:36:37,187 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 76, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:36:37,187 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+2026-03-23 21:36:37,187 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 76, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:36:37,187 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+2026-03-23 21:36:37,187 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 76, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:36:37,187 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+2026-03-23 21:36:37,187 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 76, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:36:37,187 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+2026-03-23 21:36:37,187 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 76, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:36:37,203 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+2026-03-23 21:36:37,203 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 76, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:36:37,203 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+2026-03-23 21:36:37,203 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 76, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:36:37,203 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+2026-03-23 21:36:37,203 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 76, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:36:37,203 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+2026-03-23 21:36:37,203 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 76, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:36:37,203 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+2026-03-23 21:36:37,203 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 76, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:36:37,203 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+2026-03-23 21:36:37,203 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 76, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:36:37,203 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+2026-03-23 21:36:37,203 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 76, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:36:37,203 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+2026-03-23 21:36:37,203 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 76, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:36:37,203 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+2026-03-23 21:36:37,203 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 76, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:36:37,203 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+2026-03-23 21:36:37,203 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 76, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:36:37,203 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+2026-03-23 21:36:37,203 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 76, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:36:37,203 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+2026-03-23 21:36:37,203 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 76, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:36:37,203 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+2026-03-23 21:36:37,203 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 76, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:36:37,203 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+2026-03-23 21:36:37,203 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 70, in recv
+    packet = self._handle.recv()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 191, in recv
+    raise RuntimeError("WinDivert handle is not open")
+RuntimeError: WinDivert handle is not open
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 76, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:36:37,203 - __main__ - CRITICAL - Exceeded max consecutive errors (20). Stopping.
+2026-03-23 21:36:37,203 - __main__ - INFO - Passthrough engine stopped.
+2026-03-23 21:38:38,095 - root - INFO - Logging initialized with level INFO to directory ./logs
+2026-03-23 21:38:38,095 - __main__ - INFO - Starting passthrough mode.
+2026-03-23 21:38:38,111 - __main__ - INFO - Constructing WinDivert handle with filter: 'outbound and (tcp or udp)'
+2026-03-23 21:38:38,125 - __main__ - INFO - WinDivert handle is ready.
+2026-03-23 21:38:38,125 - __main__ - INFO - Passthrough engine started.
+2026-03-23 21:38:40,066 - __main__ - CRITICAL - Exceeded max consecutive errors (20). Stopping.
+2026-03-23 21:38:40,068 - __main__ - INFO - WinDivert handle closed successfully.
+2026-03-23 21:38:40,068 - __main__ - INFO - Passthrough engine stopped.
+2026-03-23 21:39:33,531 - root - INFO - Logging initialized with level DEBUG to directory ./logs
+2026-03-23 21:39:33,531 - __main__ - INFO - Starting passthrough mode.
+2026-03-23 21:39:33,547 - __main__ - INFO - Constructing WinDivert handle with filter: 'outbound and (tcp or udp)'
+2026-03-23 21:39:33,547 - __main__ - DEBUG - Calling self._handle.open()
+2026-03-23 21:39:33,547 - __main__ - DEBUG - pydivert handle is_open: True
+2026-03-23 21:39:33,547 - __main__ - INFO - WinDivert handle is ready.
+2026-03-23 21:39:33,547 - __main__ - INFO - Passthrough engine started.
+2026-03-23 21:39:33,814 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+2026-03-23 21:39:33,814 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 95, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:39:33,891 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+2026-03-23 21:39:33,891 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 95, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:39:33,961 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+2026-03-23 21:39:33,962 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 95, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:39:33,962 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+2026-03-23 21:39:33,963 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 95, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:39:34,050 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+2026-03-23 21:39:34,050 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 95, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:39:34,050 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+2026-03-23 21:39:34,050 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 95, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:39:34,313 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+2026-03-23 21:39:34,315 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 95, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:39:34,361 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+2026-03-23 21:39:34,361 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 95, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:39:34,720 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+2026-03-23 21:39:34,721 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 95, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:39:34,876 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+2026-03-23 21:39:34,876 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 95, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:39:34,968 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+2026-03-23 21:39:34,968 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 95, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:39:34,984 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+2026-03-23 21:39:34,984 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 95, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:39:34,984 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+2026-03-23 21:39:34,987 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 95, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:39:35,131 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+2026-03-23 21:39:35,132 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 95, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:39:35,188 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+2026-03-23 21:39:35,188 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 95, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:39:35,533 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+2026-03-23 21:39:35,533 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 95, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:39:35,798 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+2026-03-23 21:39:35,798 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 95, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:39:35,937 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+2026-03-23 21:39:35,937 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 95, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:39:36,001 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+2026-03-23 21:39:36,003 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 95, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:39:36,004 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+2026-03-23 21:39:36,004 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 95, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:39:36,176 - __main__ - DEBUG - An error occurred during recv.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+2026-03-23 21:39:36,177 - __main__ - DEBUG - A recoverable error occurred in the main loop.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 91, in recv
+    return packet.raw, packet.addr
+                       ^^^^^^^^^^^
+AttributeError: 'Packet' object has no attribute 'addr'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 50, in run
+    packet_data = self._driver.recv()
+                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 95, in recv
+    raise WinDivertError("Failed to receive packet") from e
+nts.windivert_iface.WinDivertError: Failed to receive packet
+2026-03-23 21:39:36,178 - __main__ - CRITICAL - Exceeded max consecutive errors (20). Stopping.
+2026-03-23 21:39:36,178 - __main__ - DEBUG - Calling self._handle.close()
+2026-03-23 21:39:36,180 - __main__ - INFO - WinDivert handle closed successfully.
+2026-03-23 21:39:36,180 - __main__ - INFO - Passthrough engine stopped.
+2026-03-23 21:47:55,057 - root - INFO - Logging initialized with level INFO to directory ./logs
+2026-03-23 21:47:55,057 - __main__ - INFO - Starting passthrough mode.
+2026-03-23 21:47:55,057 - __main__ - CRITICAL - The 'pydivert' package is not installed. Please install it to use WinDivert.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 32, in open
+    import pydivert
+ModuleNotFoundError: No module named 'pydivert'
+2026-03-23 21:47:55,069 - __main__ - CRITICAL - An unhandled exception occurred in the engine: pydivert package not found
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 32, in open
+    import pydivert
+ModuleNotFoundError: No module named 'pydivert'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 40, in run
+    self._driver.open(self._filter)
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 35, in open
+    raise WinDivertError("pydivert package not found") from e
+nts.windivert_iface.WinDivertError: pydivert package not found
+2026-03-23 21:47:55,072 - __main__ - INFO - Passthrough engine stopped.
+2026-03-23 21:48:22,600 - root - INFO - Logging initialized with level INFO to directory ./logs
+2026-03-23 21:48:22,600 - __main__ - INFO - Starting passthrough mode.
+2026-03-23 21:48:22,630 - __main__ - INFO - Constructing WinDivert handle with filter: 'outbound and (tcp or udp)'
+2026-03-23 21:48:22,729 - __main__ - INFO - WinDivert handle is ready.
+2026-03-23 21:48:22,731 - __main__ - INFO - Passthrough engine started.
+2026-03-23 21:48:22,813 - __main__ - ERROR - A recoverable error occurred in the main loop (full traceback):
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 116, in send
+    self._handle.send(packet)
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 236, in send
+    windivert_dll.WinDivertSend(self._handle, buff, len(packet.raw), byref(packet.wd_addr),
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert_dll\__init__.py", line 54, in wrapper
+    raise err
+OSError: [WinError 87] The parameter is incorrect.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 57, in run
+    self._driver.send(packet)
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 119, in send
+    raise WinDivertError("Failed to send packet") from e
+nts.windivert_iface.WinDivertError: Failed to send packet
+2026-03-23 21:48:22,844 - __main__ - ERROR - A recoverable error occurred in the main loop (full traceback):
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 116, in send
+    self._handle.send(packet)
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 236, in send
+    windivert_dll.WinDivertSend(self._handle, buff, len(packet.raw), byref(packet.wd_addr),
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert_dll\__init__.py", line 54, in wrapper
+    raise err
+OSError: [WinError 87] The parameter is incorrect.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 57, in run
+    self._driver.send(packet)
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 119, in send
+    raise WinDivertError("Failed to send packet") from e
+nts.windivert_iface.WinDivertError: Failed to send packet
+2026-03-23 21:48:23,045 - __main__ - ERROR - A recoverable error occurred in the main loop (full traceback):
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 116, in send
+    self._handle.send(packet)
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 236, in send
+    windivert_dll.WinDivertSend(self._handle, buff, len(packet.raw), byref(packet.wd_addr),
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert_dll\__init__.py", line 54, in wrapper
+    raise err
+OSError: [WinError 87] The parameter is incorrect.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 57, in run
+    self._driver.send(packet)
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 119, in send
+    raise WinDivertError("Failed to send packet") from e
+nts.windivert_iface.WinDivertError: Failed to send packet
+2026-03-23 21:48:23,961 - __main__ - CRITICAL - Exceeded max consecutive errors (20). Stopping.
+2026-03-23 21:48:23,963 - __main__ - INFO - WinDivert handle closed successfully.
+2026-03-23 21:48:23,963 - __main__ - INFO - Passthrough engine stopped.
+2026-03-23 21:57:37,112 - root - INFO - Logging initialized with level INFO to directory ./logs
+2026-03-23 21:57:37,119 - __main__ - INFO - Starting passthrough mode.
+2026-03-23 21:57:37,161 - __main__ - INFO - Constructing WinDivert handle with filter: 'outbound and tcp and ip'
+2026-03-23 21:57:37,198 - __main__ - INFO - WinDivert handle is ready.
+2026-03-23 21:57:37,198 - __main__ - INFO - Passthrough engine started.
+2026-03-23 21:57:37,214 - __main__ - WARNING - Got 'incorrect parameter' error on send, likely a checksum issue. Dropping packet. (1 total so far)
+2026-03-23 21:57:51,317 - __main__ - WARNING - Got 'incorrect parameter' error on send, likely a checksum issue. Dropping packet. (101 total so far)
+2026-03-23 21:57:55,780 - __main__ - WARNING - Got 'incorrect parameter' error on send, likely a checksum issue. Dropping packet. (201 total so far)
+2026-03-23 21:57:59,250 - __main__ - WARNING - Got 'incorrect parameter' error on send, likely a checksum issue. Dropping packet. (301 total so far)
+2026-03-23 21:58:02,498 - __main__ - WARNING - Got 'incorrect parameter' error on send, likely a checksum issue. Dropping packet. (401 total so far)
+2026-03-23 21:58:05,481 - __main__ - WARNING - Got 'incorrect parameter' error on send, likely a checksum issue. Dropping packet. (501 total so far)
+2026-03-23 21:58:09,043 - __main__ - WARNING - Got 'incorrect parameter' error on send, likely a checksum issue. Dropping packet. (601 total so far)
+2026-03-23 21:58:13,541 - __main__ - WARNING - Got 'incorrect parameter' error on send, likely a checksum issue. Dropping packet. (701 total so far)
+2026-03-23 21:58:18,656 - __main__ - WARNING - Got 'incorrect parameter' error on send, likely a checksum issue. Dropping packet. (801 total so far)
+2026-03-23 21:58:22,492 - __main__ - WARNING - Got 'incorrect parameter' error on send, likely a checksum issue. Dropping packet. (901 total so far)
+2026-03-23 21:58:26,103 - __main__ - WARNING - Got 'incorrect parameter' error on send, likely a checksum issue. Dropping packet. (1001 total so far)
+2026-03-23 21:58:30,620 - __main__ - WARNING - Got 'incorrect parameter' error on send, likely a checksum issue. Dropping packet. (1101 total so far)
+2026-03-23 21:58:36,250 - __main__ - WARNING - Got 'incorrect parameter' error on send, likely a checksum issue. Dropping packet. (1201 total so far)
+2026-03-23 21:58:43,130 - __main__ - WARNING - Got 'incorrect parameter' error on send, likely a checksum issue. Dropping packet. (1301 total so far)
+2026-03-23 21:58:49,868 - __main__ - WARNING - Got 'incorrect parameter' error on send, likely a checksum issue. Dropping packet. (1401 total so far)
+2026-03-23 21:58:54,078 - __main__ - WARNING - Got 'incorrect parameter' error on send, likely a checksum issue. Dropping packet. (1501 total so far)
+2026-03-23 21:59:01,154 - __main__ - WARNING - Got 'incorrect parameter' error on send, likely a checksum issue. Dropping packet. (1601 total so far)
+2026-03-23 21:59:10,012 - __main__ - WARNING - Got 'incorrect parameter' error on send, likely a checksum issue. Dropping packet. (1701 total so far)
+2026-03-23 21:59:21,173 - __main__ - WARNING - Got 'incorrect parameter' error on send, likely a checksum issue. Dropping packet. (1801 total so far)
+2026-03-23 21:59:26,530 - __main__ - INFO - Ctrl+C received. Shutting down passthrough engine.
+2026-03-23 21:59:26,530 - __main__ - INFO - WinDivert handle closed successfully.
+2026-03-23 21:59:26,530 - __main__ - INFO - Passthrough engine stopped.
+2026-03-23 22:11:25,717 - root - INFO - Logging initialized with level DEBUG to directory ./logs
+2026-03-23 22:11:25,729 - __main__ - INFO - Starting passthrough mode.
+2026-03-23 22:11:25,730 - __main__ - CRITICAL - The 'pydivert' package is not installed. Please install it to use WinDivert.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 33, in open
+    import pydivert
+ModuleNotFoundError: No module named 'pydivert'
+2026-03-23 22:11:25,730 - __main__ - CRITICAL - An unhandled exception occurred in the engine: pydivert package not found
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 33, in open
+    import pydivert
+ModuleNotFoundError: No module named 'pydivert'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 41, in run
+    self._driver.open(self._filter)
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 36, in open
+    raise WinDivertError("pydivert package not found") from e
+nts.windivert_iface.WinDivertError: pydivert package not found
+2026-03-23 22:11:25,730 - __main__ - INFO - Passthrough engine stopped.
+2026-03-23 22:11:54,206 - root - INFO - Logging initialized with level DEBUG to directory ./logs
+2026-03-23 22:11:54,224 - __main__ - INFO - Starting passthrough mode.
+2026-03-23 22:11:54,275 - __main__ - INFO - Constructing WinDivert handle with filter: 'outbound and tcp and ip'
+2026-03-23 22:11:54,275 - __main__ - DEBUG - Calling self._handle.open()
+2026-03-23 22:11:54,285 - __main__ - DEBUG - pydivert handle is_open: True
+2026-03-23 22:11:54,285 - __main__ - INFO - WinDivert handle is ready.
+2026-03-23 22:11:54,285 - __main__ - INFO - Passthrough engine started.
+2026-03-23 22:11:54,815 - __main__ - INFO - --- pydivert Packet Diagnostics (first packet) ---
+2026-03-23 22:11:54,815 - __main__ - INFO - Packet type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:11:54,815 - __main__ - INFO - Packet raw length: 1
+2026-03-23 22:11:54,815 - __main__ - INFO - Packet wd_addr type: <class 'pydivert.windivert_dll.structs.WinDivertAddress'>
+2026-03-23 22:11:54,815 - __main__ - INFO - Packet attributes: ['address_family', 'dst_addr', 'ip', 'ipv4', 'ipv6', 'raw', 'recalculate_checksums', 'src_addr', 'tcp', 'udp', 'wd_addr']
+2026-03-23 22:11:54,815 - __main__ - INFO - Handle attributes: ['close', 'is_open', 'open', 'recv', 'send']
+2026-03-23 22:11:54,815 - __main__ - INFO - -------------------------------------------------
+2026-03-23 22:11:54,815 - __main__ - DEBUG - Calling packet.recalculate_checksums() to repair checksums.
+2026-03-23 22:11:54,815 - __main__ - DEBUG - Send strategy 1: trying self._handle.send(packet)
+2026-03-23 22:11:54,815 - __main__ - DEBUG - Send strategy 1 failed with WinError 87.
+2026-03-23 22:11:54,815 - __main__ - DEBUG - Send strategy 2: trying self._handle.send(packet.raw, packet.wd_addr)
+2026-03-23 22:11:54,815 - __main__ - CRITICAL - An unhandled exception occurred in the engine: 'memoryview' object has no attribute 'recalculate_checksums'
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine.py", line 61, in run
+    self._driver.send(packet)
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_iface.py", line 164, in send
+    self._handle.send(packet.raw, packet.wd_addr)
+  File "D:\study files\6th sem\sockets programs\lab el\venv\Lib\site-packages\pydivert\windivert.py", line 227, in send
+    packet.recalculate_checksums()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'memoryview' object has no attribute 'recalculate_checksums'
+2026-03-23 22:11:54,828 - __main__ - DEBUG - Calling self._handle.close()
+2026-03-23 22:11:54,831 - __main__ - INFO - WinDivert handle closed successfully.
+2026-03-23 22:11:54,832 - __main__ - INFO - Passthrough engine stopped.
+2026-03-23 22:14:31,554 - root - INFO - Logging initialized with level INFO to directory ./logs
+2026-03-23 22:14:31,569 - __main__ - INFO - Starting passthrough mode.
+2026-03-23 22:14:31,605 - __main__ - INFO - Constructing WinDivert handle with filter: 'outbound and tcp and ip'
+2026-03-23 22:14:31,618 - __main__ - INFO - WinDivert handle is ready.
+2026-03-23 22:14:31,618 - __main__ - INFO - Passthrough engine started.
+2026-03-23 22:14:32,709 - __main__ - INFO - --- pydivert Packet Diagnostics (first packet) ---
+2026-03-23 22:14:32,709 - __main__ - INFO - Packet type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:14:32,709 - __main__ - INFO - Packet raw length: 1
+2026-03-23 22:14:32,712 - __main__ - INFO - Packet wd_addr type: <class 'pydivert.windivert_dll.structs.WinDivertAddress'>
+2026-03-23 22:14:32,712 - __main__ - INFO - Packet attributes: ['address_family', 'dst_addr', 'ip', 'ipv4', 'ipv6', 'raw', 'recalculate_checksums', 'src_addr', 'tcp', 'udp', 'wd_addr']
+2026-03-23 22:14:32,712 - __main__ - INFO - Handle attributes: ['close', 'is_open', 'open', 'recv', 'send']
+2026-03-23 22:14:32,712 - __main__ - INFO - -------------------------------------------------
+2026-03-23 22:14:32,712 - __main__ - INFO - Stats: captured_packets=1, sent_packets=1, dropped_packets=0, errors=0, captured_bytes=1, sent_bytes=1, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1 | 0.87 pps, 0.00 Mbps
+2026-03-23 22:14:33,879 - __main__ - INFO - Stats: captured_packets=6, sent_packets=6, dropped_packets=0, errors=0, captured_bytes=6, sent_bytes=6, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=6 | 4.29 pps, 0.00 Mbps
+2026-03-23 22:14:34,880 - __main__ - INFO - Stats: captured_packets=16, sent_packets=16, dropped_packets=0, errors=0, captured_bytes=16, sent_bytes=16, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=16 | 9.99 pps, 0.00 Mbps
+2026-03-23 22:14:35,925 - __main__ - INFO - Stats: captured_packets=24, sent_packets=24, dropped_packets=0, errors=0, captured_bytes=24, sent_bytes=24, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=24 | 7.65 pps, 0.00 Mbps
+2026-03-23 22:14:37,426 - __main__ - INFO - Stats: captured_packets=33, sent_packets=33, dropped_packets=0, errors=0, captured_bytes=33, sent_bytes=33, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=33 | 6.00 pps, 0.00 Mbps
+2026-03-23 22:14:38,426 - __main__ - INFO - Stats: captured_packets=47, sent_packets=47, dropped_packets=0, errors=0, captured_bytes=47, sent_bytes=47, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=47 | 13.99 pps, 0.00 Mbps
+2026-03-23 22:14:39,472 - __main__ - INFO - Stats: captured_packets=59, sent_packets=59, dropped_packets=0, errors=0, captured_bytes=59, sent_bytes=59, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=59 | 11.47 pps, 0.00 Mbps
+2026-03-23 22:14:40,480 - __main__ - INFO - Stats: captured_packets=68, sent_packets=68, dropped_packets=0, errors=0, captured_bytes=68, sent_bytes=68, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=68 | 8.93 pps, 0.00 Mbps
+2026-03-23 22:14:41,489 - __main__ - INFO - Stats: captured_packets=73, sent_packets=73, dropped_packets=0, errors=0, captured_bytes=73, sent_bytes=73, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=73 | 4.96 pps, 0.00 Mbps
+2026-03-23 22:14:42,540 - __main__ - INFO - Stats: captured_packets=86, sent_packets=86, dropped_packets=0, errors=0, captured_bytes=86, sent_bytes=86, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=86 | 12.37 pps, 0.00 Mbps
+2026-03-23 22:14:43,725 - __main__ - INFO - Stats: captured_packets=100, sent_packets=100, dropped_packets=0, errors=0, captured_bytes=100, sent_bytes=100, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=100 | 11.82 pps, 0.00 Mbps
+2026-03-23 22:14:44,728 - __main__ - INFO - Stats: captured_packets=108, sent_packets=108, dropped_packets=0, errors=0, captured_bytes=108, sent_bytes=108, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=108 | 7.98 pps, 0.00 Mbps
+2026-03-23 22:14:45,832 - __main__ - INFO - Stats: captured_packets=118, sent_packets=118, dropped_packets=0, errors=0, captured_bytes=118, sent_bytes=118, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=118 | 9.05 pps, 0.00 Mbps
+2026-03-23 22:14:46,833 - __main__ - INFO - Stats: captured_packets=142, sent_packets=142, dropped_packets=0, errors=0, captured_bytes=142, sent_bytes=142, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=142 | 23.99 pps, 0.00 Mbps
+2026-03-23 22:14:47,848 - __main__ - INFO - Stats: captured_packets=169, sent_packets=169, dropped_packets=0, errors=0, captured_bytes=169, sent_bytes=169, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=169 | 26.58 pps, 0.00 Mbps
+2026-03-23 22:14:48,861 - __main__ - INFO - Stats: captured_packets=188, sent_packets=188, dropped_packets=0, errors=0, captured_bytes=188, sent_bytes=188, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=188 | 18.77 pps, 0.00 Mbps
+2026-03-23 22:14:49,955 - __main__ - INFO - Stats: captured_packets=200, sent_packets=200, dropped_packets=0, errors=0, captured_bytes=200, sent_bytes=200, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=200 | 11.05 pps, 0.00 Mbps
+2026-03-23 22:14:50,981 - __main__ - INFO - Stats: captured_packets=220, sent_packets=220, dropped_packets=0, errors=0, captured_bytes=220, sent_bytes=220, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=220 | 19.34 pps, 0.00 Mbps
+2026-03-23 22:14:51,985 - __main__ - INFO - Stats: captured_packets=240, sent_packets=240, dropped_packets=0, errors=0, captured_bytes=240, sent_bytes=240, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=240 | 19.93 pps, 0.00 Mbps
+2026-03-23 22:14:53,000 - __main__ - INFO - Stats: captured_packets=262, sent_packets=262, dropped_packets=0, errors=0, captured_bytes=262, sent_bytes=262, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=262 | 21.66 pps, 0.00 Mbps
+2026-03-23 22:14:54,085 - __main__ - INFO - Stats: captured_packets=269, sent_packets=269, dropped_packets=0, errors=0, captured_bytes=269, sent_bytes=269, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=269 | 6.45 pps, 0.00 Mbps
+2026-03-23 22:14:55,127 - __main__ - INFO - Stats: captured_packets=291, sent_packets=291, dropped_packets=0, errors=0, captured_bytes=291, sent_bytes=291, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=291 | 21.13 pps, 0.00 Mbps
+2026-03-23 22:14:56,287 - __main__ - INFO - Stats: captured_packets=318, sent_packets=318, dropped_packets=0, errors=0, captured_bytes=318, sent_bytes=318, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=318 | 23.27 pps, 0.00 Mbps
+2026-03-23 22:14:57,300 - __main__ - INFO - Stats: captured_packets=337, sent_packets=337, dropped_packets=0, errors=0, captured_bytes=337, sent_bytes=337, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=337 | 18.76 pps, 0.00 Mbps
+2026-03-23 22:14:58,316 - __main__ - INFO - Stats: captured_packets=352, sent_packets=352, dropped_packets=0, errors=0, captured_bytes=352, sent_bytes=352, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=352 | 14.78 pps, 0.00 Mbps
+2026-03-23 22:14:59,408 - __main__ - INFO - Stats: captured_packets=378, sent_packets=378, dropped_packets=0, errors=0, captured_bytes=378, sent_bytes=378, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=378 | 23.79 pps, 0.00 Mbps
+2026-03-23 22:15:00,565 - __main__ - INFO - Stats: captured_packets=395, sent_packets=395, dropped_packets=0, errors=0, captured_bytes=395, sent_bytes=395, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=395 | 14.69 pps, 0.00 Mbps
+2026-03-23 22:15:01,619 - __main__ - INFO - Stats: captured_packets=416, sent_packets=416, dropped_packets=0, errors=0, captured_bytes=416, sent_bytes=416, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=416 | 19.92 pps, 0.00 Mbps
+2026-03-23 22:15:02,619 - __main__ - INFO - Stats: captured_packets=445, sent_packets=445, dropped_packets=0, errors=0, captured_bytes=445, sent_bytes=445, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=445 | 29.00 pps, 0.00 Mbps
+2026-03-23 22:15:03,629 - __main__ - INFO - Stats: captured_packets=463, sent_packets=463, dropped_packets=0, errors=0, captured_bytes=463, sent_bytes=463, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=463 | 17.83 pps, 0.00 Mbps
+2026-03-23 22:15:04,668 - __main__ - INFO - Stats: captured_packets=478, sent_packets=478, dropped_packets=0, errors=0, captured_bytes=478, sent_bytes=478, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=478 | 14.44 pps, 0.00 Mbps
+2026-03-23 22:15:05,694 - __main__ - INFO - Stats: captured_packets=487, sent_packets=487, dropped_packets=0, errors=0, captured_bytes=487, sent_bytes=487, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=487 | 8.77 pps, 0.00 Mbps
+2026-03-23 22:15:06,769 - __main__ - INFO - Stats: captured_packets=495, sent_packets=495, dropped_packets=0, errors=0, captured_bytes=495, sent_bytes=495, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=495 | 7.44 pps, 0.00 Mbps
+2026-03-23 22:15:07,968 - __main__ - INFO - Stats: captured_packets=514, sent_packets=514, dropped_packets=0, errors=0, captured_bytes=514, sent_bytes=514, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=514 | 15.84 pps, 0.00 Mbps
+2026-03-23 22:15:08,985 - __main__ - INFO - Stats: captured_packets=530, sent_packets=530, dropped_packets=0, errors=0, captured_bytes=530, sent_bytes=530, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=530 | 15.74 pps, 0.00 Mbps
+2026-03-23 22:15:10,000 - __main__ - INFO - Stats: captured_packets=542, sent_packets=542, dropped_packets=0, errors=0, captured_bytes=542, sent_bytes=542, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=542 | 11.82 pps, 0.00 Mbps
+2026-03-23 22:15:11,016 - __main__ - INFO - Stats: captured_packets=564, sent_packets=564, dropped_packets=0, errors=0, captured_bytes=564, sent_bytes=564, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=564 | 21.65 pps, 0.00 Mbps
+2026-03-23 22:15:12,076 - __main__ - INFO - Stats: captured_packets=587, sent_packets=587, dropped_packets=0, errors=0, captured_bytes=587, sent_bytes=587, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=587 | 21.70 pps, 0.00 Mbps
+2026-03-23 22:15:13,084 - __main__ - INFO - Stats: captured_packets=602, sent_packets=602, dropped_packets=0, errors=0, captured_bytes=602, sent_bytes=602, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=602 | 14.88 pps, 0.00 Mbps
+2026-03-23 22:15:14,099 - __main__ - INFO - Stats: captured_packets=623, sent_packets=623, dropped_packets=0, errors=0, captured_bytes=623, sent_bytes=623, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=623 | 20.70 pps, 0.00 Mbps
+2026-03-23 22:15:15,300 - __main__ - INFO - Stats: captured_packets=635, sent_packets=635, dropped_packets=0, errors=0, captured_bytes=635, sent_bytes=635, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=635 | 9.99 pps, 0.00 Mbps
+2026-03-23 22:15:16,733 - __main__ - INFO - Stats: captured_packets=652, sent_packets=652, dropped_packets=0, errors=0, captured_bytes=652, sent_bytes=652, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=652 | 11.87 pps, 0.00 Mbps
+2026-03-23 22:15:17,747 - __main__ - INFO - Stats: captured_packets=661, sent_packets=661, dropped_packets=0, errors=0, captured_bytes=661, sent_bytes=661, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=661 | 8.87 pps, 0.00 Mbps
+2026-03-23 22:15:18,774 - __main__ - INFO - Stats: captured_packets=673, sent_packets=673, dropped_packets=0, errors=0, captured_bytes=673, sent_bytes=673, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=673 | 11.69 pps, 0.00 Mbps
+2026-03-23 22:15:19,782 - __main__ - INFO - Stats: captured_packets=681, sent_packets=681, dropped_packets=0, errors=0, captured_bytes=681, sent_bytes=681, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=681 | 7.94 pps, 0.00 Mbps
+2026-03-23 22:15:20,798 - __main__ - INFO - Stats: captured_packets=700, sent_packets=700, dropped_packets=0, errors=0, captured_bytes=700, sent_bytes=700, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=700 | 18.70 pps, 0.00 Mbps
+2026-03-23 22:15:22,063 - __main__ - INFO - Stats: captured_packets=719, sent_packets=719, dropped_packets=0, errors=0, captured_bytes=719, sent_bytes=719, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=719 | 15.02 pps, 0.00 Mbps
+2026-03-23 22:15:23,147 - __main__ - INFO - Stats: captured_packets=736, sent_packets=736, dropped_packets=0, errors=0, captured_bytes=736, sent_bytes=736, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=736 | 15.69 pps, 0.00 Mbps
+2026-03-23 22:15:24,196 - __main__ - INFO - Stats: captured_packets=751, sent_packets=751, dropped_packets=0, errors=0, captured_bytes=751, sent_bytes=751, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=751 | 14.29 pps, 0.00 Mbps
+2026-03-23 22:15:25,204 - __main__ - INFO - Stats: captured_packets=760, sent_packets=760, dropped_packets=0, errors=0, captured_bytes=760, sent_bytes=760, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=760 | 8.93 pps, 0.00 Mbps
+2026-03-23 22:15:26,424 - __main__ - INFO - Stats: captured_packets=774, sent_packets=774, dropped_packets=0, errors=0, captured_bytes=774, sent_bytes=774, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=774 | 11.47 pps, 0.00 Mbps
+2026-03-23 22:15:27,429 - __main__ - INFO - Stats: captured_packets=786, sent_packets=786, dropped_packets=0, errors=0, captured_bytes=786, sent_bytes=786, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=786 | 11.94 pps, 0.00 Mbps
+2026-03-23 22:15:28,811 - __main__ - INFO - Stats: captured_packets=804, sent_packets=804, dropped_packets=0, errors=0, captured_bytes=804, sent_bytes=804, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=804 | 13.03 pps, 0.00 Mbps
+2026-03-23 22:15:29,827 - __main__ - INFO - Stats: captured_packets=812, sent_packets=812, dropped_packets=0, errors=0, captured_bytes=812, sent_bytes=812, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=812 | 7.87 pps, 0.00 Mbps
+2026-03-23 22:15:31,226 - __main__ - INFO - Stats: captured_packets=818, sent_packets=818, dropped_packets=0, errors=0, captured_bytes=818, sent_bytes=818, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=818 | 4.29 pps, 0.00 Mbps
+2026-03-23 22:15:32,733 - __main__ - INFO - Stats: captured_packets=827, sent_packets=827, dropped_packets=0, errors=0, captured_bytes=827, sent_bytes=827, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=827 | 5.97 pps, 0.00 Mbps
+2026-03-23 22:15:33,799 - __main__ - INFO - Stats: captured_packets=834, sent_packets=834, dropped_packets=0, errors=0, captured_bytes=834, sent_bytes=834, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=834 | 6.57 pps, 0.00 Mbps
+2026-03-23 22:15:34,825 - __main__ - INFO - Stats: captured_packets=847, sent_packets=847, dropped_packets=0, errors=0, captured_bytes=847, sent_bytes=847, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=847 | 12.67 pps, 0.00 Mbps
+2026-03-23 22:15:36,108 - __main__ - INFO - Stats: captured_packets=866, sent_packets=866, dropped_packets=0, errors=0, captured_bytes=866, sent_bytes=866, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=866 | 14.82 pps, 0.00 Mbps
+2026-03-23 22:15:37,133 - __main__ - INFO - Stats: captured_packets=887, sent_packets=887, dropped_packets=0, errors=0, captured_bytes=887, sent_bytes=887, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=887 | 20.48 pps, 0.00 Mbps
+2026-03-23 22:15:38,163 - __main__ - INFO - Stats: captured_packets=898, sent_packets=898, dropped_packets=0, errors=0, captured_bytes=898, sent_bytes=898, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=898 | 10.68 pps, 0.00 Mbps
+2026-03-23 22:15:39,235 - __main__ - INFO - Stats: captured_packets=911, sent_packets=911, dropped_packets=0, errors=0, captured_bytes=911, sent_bytes=911, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=911 | 12.13 pps, 0.00 Mbps
+2026-03-23 22:15:40,415 - __main__ - INFO - Stats: captured_packets=924, sent_packets=924, dropped_packets=0, errors=0, captured_bytes=924, sent_bytes=924, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=924 | 11.02 pps, 0.00 Mbps
+2026-03-23 22:15:41,464 - __main__ - INFO - Stats: captured_packets=937, sent_packets=937, dropped_packets=0, errors=0, captured_bytes=937, sent_bytes=937, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=937 | 12.39 pps, 0.00 Mbps
+2026-03-23 22:15:42,496 - __main__ - INFO - Stats: captured_packets=948, sent_packets=948, dropped_packets=0, errors=0, captured_bytes=948, sent_bytes=948, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=948 | 10.66 pps, 0.00 Mbps
+2026-03-23 22:15:43,517 - __main__ - INFO - Stats: captured_packets=958, sent_packets=958, dropped_packets=0, errors=0, captured_bytes=958, sent_bytes=958, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=958 | 9.80 pps, 0.00 Mbps
+2026-03-23 22:15:44,581 - __main__ - INFO - Stats: captured_packets=961, sent_packets=961, dropped_packets=0, errors=0, captured_bytes=961, sent_bytes=961, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=961 | 2.82 pps, 0.00 Mbps
+2026-03-23 22:15:45,586 - __main__ - INFO - Stats: captured_packets=974, sent_packets=974, dropped_packets=0, errors=0, captured_bytes=974, sent_bytes=974, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=974 | 12.94 pps, 0.00 Mbps
+2026-03-23 22:15:46,678 - __main__ - INFO - Stats: captured_packets=984, sent_packets=984, dropped_packets=0, errors=0, captured_bytes=984, sent_bytes=984, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=984 | 9.15 pps, 0.00 Mbps
+2026-03-23 22:15:47,719 - __main__ - INFO - Stats: captured_packets=992, sent_packets=992, dropped_packets=0, errors=0, captured_bytes=992, sent_bytes=992, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=992 | 7.69 pps, 0.00 Mbps
+2026-03-23 22:15:48,762 - __main__ - INFO - Stats: captured_packets=1001, sent_packets=1001, dropped_packets=0, errors=0, captured_bytes=1001, sent_bytes=1001, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1001 | 8.63 pps, 0.00 Mbps
+2026-03-23 22:15:50,376 - __main__ - INFO - Stats: captured_packets=1014, sent_packets=1014, dropped_packets=0, errors=0, captured_bytes=1014, sent_bytes=1014, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1014 | 8.05 pps, 0.00 Mbps
+2026-03-23 22:15:51,484 - __main__ - INFO - Stats: captured_packets=1020, sent_packets=1020, dropped_packets=0, errors=0, captured_bytes=1020, sent_bytes=1020, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1020 | 5.41 pps, 0.00 Mbps
+2026-03-23 22:15:52,492 - __main__ - INFO - Stats: captured_packets=1028, sent_packets=1028, dropped_packets=0, errors=0, captured_bytes=1028, sent_bytes=1028, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1028 | 7.94 pps, 0.00 Mbps
+2026-03-23 22:15:53,550 - __main__ - INFO - Stats: captured_packets=1033, sent_packets=1033, dropped_packets=0, errors=0, captured_bytes=1033, sent_bytes=1033, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1033 | 4.72 pps, 0.00 Mbps
+2026-03-23 22:15:54,690 - __main__ - INFO - Stats: captured_packets=1041, sent_packets=1041, dropped_packets=0, errors=0, captured_bytes=1041, sent_bytes=1041, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1041 | 7.02 pps, 0.00 Mbps
+2026-03-23 22:15:55,818 - __main__ - INFO - Stats: captured_packets=1049, sent_packets=1049, dropped_packets=0, errors=0, captured_bytes=1049, sent_bytes=1049, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1049 | 7.09 pps, 0.00 Mbps
+2026-03-23 22:15:56,972 - __main__ - INFO - Stats: captured_packets=1061, sent_packets=1061, dropped_packets=0, errors=0, captured_bytes=1061, sent_bytes=1061, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1061 | 10.40 pps, 0.00 Mbps
+2026-03-23 22:15:58,015 - __main__ - INFO - Stats: captured_packets=1074, sent_packets=1074, dropped_packets=0, errors=0, captured_bytes=1074, sent_bytes=1074, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1074 | 12.47 pps, 0.00 Mbps
+2026-03-23 22:15:59,042 - __main__ - INFO - Stats: captured_packets=1082, sent_packets=1082, dropped_packets=0, errors=0, captured_bytes=1082, sent_bytes=1082, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1082 | 7.78 pps, 0.00 Mbps
+2026-03-23 22:16:00,042 - __main__ - INFO - Stats: captured_packets=1098, sent_packets=1098, dropped_packets=0, errors=0, captured_bytes=1098, sent_bytes=1098, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1098 | 16.00 pps, 0.00 Mbps
+2026-03-23 22:16:01,196 - __main__ - INFO - Stats: captured_packets=1112, sent_packets=1112, dropped_packets=0, errors=0, captured_bytes=1112, sent_bytes=1112, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1112 | 12.13 pps, 0.00 Mbps
+2026-03-23 22:16:02,846 - __main__ - INFO - Stats: captured_packets=1122, sent_packets=1122, dropped_packets=0, errors=0, captured_bytes=1122, sent_bytes=1122, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1122 | 6.06 pps, 0.00 Mbps
+2026-03-23 22:16:03,853 - __main__ - INFO - Stats: captured_packets=1132, sent_packets=1132, dropped_packets=0, errors=0, captured_bytes=1132, sent_bytes=1132, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1132 | 9.94 pps, 0.00 Mbps
+2026-03-23 22:16:05,011 - __main__ - INFO - Stats: captured_packets=1141, sent_packets=1141, dropped_packets=0, errors=0, captured_bytes=1141, sent_bytes=1141, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1141 | 7.77 pps, 0.00 Mbps
+2026-03-23 22:16:06,062 - __main__ - INFO - Stats: captured_packets=1150, sent_packets=1150, dropped_packets=0, errors=0, captured_bytes=1150, sent_bytes=1150, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1150 | 8.56 pps, 0.00 Mbps
+2026-03-23 22:16:07,157 - __main__ - INFO - Stats: captured_packets=1176, sent_packets=1176, dropped_packets=0, errors=0, captured_bytes=1176, sent_bytes=1176, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1176 | 23.75 pps, 0.00 Mbps
+2026-03-23 22:16:08,160 - __main__ - INFO - Stats: captured_packets=1208, sent_packets=1208, dropped_packets=0, errors=0, captured_bytes=1208, sent_bytes=1208, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1208 | 31.92 pps, 0.00 Mbps
+2026-03-23 22:16:09,167 - __main__ - INFO - Stats: captured_packets=1230, sent_packets=1230, dropped_packets=0, errors=0, captured_bytes=1230, sent_bytes=1230, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1230 | 21.83 pps, 0.00 Mbps
+2026-03-23 22:16:10,175 - __main__ - INFO - Stats: captured_packets=1251, sent_packets=1251, dropped_packets=0, errors=0, captured_bytes=1251, sent_bytes=1251, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1251 | 20.83 pps, 0.00 Mbps
+2026-03-23 22:16:11,181 - __main__ - INFO - Stats: captured_packets=1283, sent_packets=1283, dropped_packets=0, errors=0, captured_bytes=1283, sent_bytes=1283, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1283 | 31.81 pps, 0.00 Mbps
+2026-03-23 22:16:12,189 - __main__ - INFO - Stats: captured_packets=1308, sent_packets=1308, dropped_packets=0, errors=0, captured_bytes=1308, sent_bytes=1308, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1308 | 24.82 pps, 0.00 Mbps
+2026-03-23 22:16:13,220 - __main__ - INFO - Stats: captured_packets=1315, sent_packets=1315, dropped_packets=0, errors=0, captured_bytes=1315, sent_bytes=1315, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1315 | 6.79 pps, 0.00 Mbps
+2026-03-23 22:16:14,236 - __main__ - INFO - Stats: captured_packets=1344, sent_packets=1344, dropped_packets=0, errors=0, captured_bytes=1344, sent_bytes=1344, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1344 | 28.53 pps, 0.00 Mbps
+2026-03-23 22:16:15,337 - __main__ - INFO - Stats: captured_packets=1353, sent_packets=1353, dropped_packets=0, errors=0, captured_bytes=1353, sent_bytes=1353, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1353 | 8.18 pps, 0.00 Mbps
+2026-03-23 22:16:17,067 - __main__ - INFO - Stats: captured_packets=1359, sent_packets=1359, dropped_packets=0, errors=0, captured_bytes=1359, sent_bytes=1359, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1359 | 3.47 pps, 0.00 Mbps
+2026-03-23 22:16:18,096 - __main__ - INFO - Stats: captured_packets=1373, sent_packets=1373, dropped_packets=0, errors=0, captured_bytes=1373, sent_bytes=1373, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1373 | 13.60 pps, 0.00 Mbps
+2026-03-23 22:16:19,106 - __main__ - INFO - Stats: captured_packets=1387, sent_packets=1387, dropped_packets=0, errors=0, captured_bytes=1387, sent_bytes=1387, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1387 | 13.86 pps, 0.00 Mbps
+2026-03-23 22:16:20,121 - __main__ - INFO - Stats: captured_packets=1406, sent_packets=1406, dropped_packets=0, errors=0, captured_bytes=1406, sent_bytes=1406, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1406 | 18.72 pps, 0.00 Mbps
+2026-03-23 22:16:21,178 - __main__ - INFO - Stats: captured_packets=1421, sent_packets=1421, dropped_packets=0, errors=0, captured_bytes=1421, sent_bytes=1421, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1421 | 14.20 pps, 0.00 Mbps
+2026-03-23 22:16:22,185 - __main__ - INFO - Stats: captured_packets=1433, sent_packets=1433, dropped_packets=0, errors=0, captured_bytes=1433, sent_bytes=1433, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1433 | 11.91 pps, 0.00 Mbps
+2026-03-23 22:16:23,341 - __main__ - INFO - Stats: captured_packets=1452, sent_packets=1452, dropped_packets=0, errors=0, captured_bytes=1452, sent_bytes=1452, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1452 | 16.44 pps, 0.00 Mbps
+2026-03-23 22:16:24,352 - __main__ - INFO - Stats: captured_packets=1468, sent_packets=1468, dropped_packets=0, errors=0, captured_bytes=1468, sent_bytes=1468, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1468 | 15.83 pps, 0.00 Mbps
+2026-03-23 22:16:25,546 - __main__ - INFO - Stats: captured_packets=1486, sent_packets=1486, dropped_packets=0, errors=0, captured_bytes=1486, sent_bytes=1486, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1486 | 15.08 pps, 0.00 Mbps
+2026-03-23 22:16:26,575 - __main__ - INFO - Stats: captured_packets=1517, sent_packets=1517, dropped_packets=0, errors=0, captured_bytes=1517, sent_bytes=1517, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1517 | 30.12 pps, 0.00 Mbps
+2026-03-23 22:16:27,643 - __main__ - INFO - Stats: captured_packets=1533, sent_packets=1533, dropped_packets=0, errors=0, captured_bytes=1533, sent_bytes=1533, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1533 | 14.99 pps, 0.00 Mbps
+2026-03-23 22:16:28,749 - __main__ - INFO - Stats: captured_packets=1542, sent_packets=1542, dropped_packets=0, errors=0, captured_bytes=1542, sent_bytes=1542, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1542 | 8.13 pps, 0.00 Mbps
+2026-03-23 22:16:29,770 - __main__ - INFO - Stats: captured_packets=1548, sent_packets=1548, dropped_packets=0, errors=0, captured_bytes=1548, sent_bytes=1548, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1548 | 5.88 pps, 0.00 Mbps
+2026-03-23 22:16:30,817 - __main__ - INFO - Stats: captured_packets=1554, sent_packets=1554, dropped_packets=0, errors=0, captured_bytes=1554, sent_bytes=1554, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1554 | 5.73 pps, 0.00 Mbps
+2026-03-23 22:16:31,849 - __main__ - INFO - Stats: captured_packets=1569, sent_packets=1569, dropped_packets=0, errors=0, captured_bytes=1569, sent_bytes=1569, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1569 | 14.54 pps, 0.00 Mbps
+2026-03-23 22:16:32,856 - __main__ - INFO - Stats: captured_packets=1591, sent_packets=1591, dropped_packets=0, errors=0, captured_bytes=1591, sent_bytes=1591, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1591 | 21.85 pps, 0.00 Mbps
+2026-03-23 22:16:34,150 - __main__ - INFO - Stats: captured_packets=1602, sent_packets=1602, dropped_packets=0, errors=0, captured_bytes=1602, sent_bytes=1602, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1602 | 8.50 pps, 0.00 Mbps
+2026-03-23 22:16:35,191 - __main__ - INFO - Stats: captured_packets=1624, sent_packets=1624, dropped_packets=0, errors=0, captured_bytes=1624, sent_bytes=1624, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1624 | 21.13 pps, 0.00 Mbps
+2026-03-23 22:16:36,462 - __main__ - INFO - Stats: captured_packets=1633, sent_packets=1633, dropped_packets=0, errors=0, captured_bytes=1633, sent_bytes=1633, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1633 | 7.08 pps, 0.00 Mbps
+2026-03-23 22:16:37,479 - __main__ - INFO - Stats: captured_packets=1638, sent_packets=1638, dropped_packets=0, errors=0, captured_bytes=1638, sent_bytes=1638, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1638 | 4.91 pps, 0.00 Mbps
+2026-03-23 22:16:38,613 - __main__ - INFO - Stats: captured_packets=1644, sent_packets=1644, dropped_packets=0, errors=0, captured_bytes=1644, sent_bytes=1644, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1644 | 5.29 pps, 0.00 Mbps
+2026-03-23 22:16:39,653 - __main__ - INFO - Stats: captured_packets=1667, sent_packets=1667, dropped_packets=0, errors=0, captured_bytes=1667, sent_bytes=1667, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1667 | 22.12 pps, 0.00 Mbps
+2026-03-23 22:16:40,694 - __main__ - INFO - Stats: captured_packets=1679, sent_packets=1679, dropped_packets=0, errors=0, captured_bytes=1679, sent_bytes=1679, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1679 | 11.52 pps, 0.00 Mbps
+2026-03-23 22:16:41,786 - __main__ - INFO - Stats: captured_packets=1694, sent_packets=1694, dropped_packets=0, errors=0, captured_bytes=1694, sent_bytes=1694, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1694 | 13.74 pps, 0.00 Mbps
+2026-03-23 22:16:42,828 - __main__ - INFO - Stats: captured_packets=1708, sent_packets=1708, dropped_packets=0, errors=0, captured_bytes=1708, sent_bytes=1708, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1708 | 13.44 pps, 0.00 Mbps
+2026-03-23 22:16:44,102 - __main__ - INFO - Stats: captured_packets=1719, sent_packets=1719, dropped_packets=0, errors=0, captured_bytes=1719, sent_bytes=1719, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1719 | 8.63 pps, 0.00 Mbps
+2026-03-23 22:16:45,125 - __main__ - INFO - Stats: captured_packets=1729, sent_packets=1729, dropped_packets=0, errors=0, captured_bytes=1729, sent_bytes=1729, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1729 | 9.78 pps, 0.00 Mbps
+2026-03-23 22:16:46,359 - __main__ - INFO - Stats: captured_packets=1733, sent_packets=1733, dropped_packets=0, errors=0, captured_bytes=1733, sent_bytes=1733, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1733 | 3.24 pps, 0.00 Mbps
+2026-03-23 22:16:47,367 - __main__ - INFO - Stats: captured_packets=1749, sent_packets=1749, dropped_packets=0, errors=0, captured_bytes=1749, sent_bytes=1749, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1749 | 15.86 pps, 0.00 Mbps
+2026-03-23 22:16:48,376 - __main__ - INFO - Stats: captured_packets=1760, sent_packets=1760, dropped_packets=0, errors=0, captured_bytes=1760, sent_bytes=1760, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1760 | 10.90 pps, 0.00 Mbps
+2026-03-23 22:16:49,390 - __main__ - INFO - Stats: captured_packets=1770, sent_packets=1770, dropped_packets=0, errors=0, captured_bytes=1770, sent_bytes=1770, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1770 | 9.86 pps, 0.00 Mbps
+2026-03-23 22:16:50,452 - __main__ - INFO - Stats: captured_packets=1779, sent_packets=1779, dropped_packets=0, errors=0, captured_bytes=1779, sent_bytes=1779, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1779 | 8.47 pps, 0.00 Mbps
+2026-03-23 22:16:51,467 - __main__ - INFO - Stats: captured_packets=1785, sent_packets=1785, dropped_packets=0, errors=0, captured_bytes=1785, sent_bytes=1785, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1785 | 5.91 pps, 0.00 Mbps
+2026-03-23 22:16:52,481 - __main__ - INFO - Stats: captured_packets=1796, sent_packets=1796, dropped_packets=0, errors=0, captured_bytes=1796, sent_bytes=1796, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1796 | 10.85 pps, 0.00 Mbps
+2026-03-23 22:16:53,634 - __main__ - INFO - Stats: captured_packets=1814, sent_packets=1814, dropped_packets=0, errors=0, captured_bytes=1814, sent_bytes=1814, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1814 | 15.62 pps, 0.00 Mbps
+2026-03-23 22:16:54,971 - __main__ - INFO - Stats: captured_packets=1830, sent_packets=1830, dropped_packets=0, errors=0, captured_bytes=1830, sent_bytes=1830, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1830 | 11.96 pps, 0.00 Mbps
+2026-03-23 22:16:56,118 - __main__ - INFO - Stats: captured_packets=1847, sent_packets=1847, dropped_packets=0, errors=0, captured_bytes=1847, sent_bytes=1847, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1847 | 14.84 pps, 0.00 Mbps
+2026-03-23 22:16:57,351 - __main__ - INFO - Stats: captured_packets=1864, sent_packets=1864, dropped_packets=0, errors=0, captured_bytes=1864, sent_bytes=1864, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1864 | 13.77 pps, 0.00 Mbps
+2026-03-23 22:16:58,386 - __main__ - INFO - Stats: captured_packets=1868, sent_packets=1868, dropped_packets=0, errors=0, captured_bytes=1868, sent_bytes=1868, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1868 | 3.87 pps, 0.00 Mbps
+2026-03-23 22:16:59,399 - __main__ - INFO - Stats: captured_packets=1872, sent_packets=1872, dropped_packets=0, errors=0, captured_bytes=1872, sent_bytes=1872, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1872 | 3.95 pps, 0.00 Mbps
+2026-03-23 22:17:00,718 - __main__ - INFO - Stats: captured_packets=1889, sent_packets=1889, dropped_packets=0, errors=0, captured_bytes=1889, sent_bytes=1889, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1889 | 12.88 pps, 0.00 Mbps
+2026-03-23 22:17:01,919 - __main__ - INFO - Stats: captured_packets=1899, sent_packets=1899, dropped_packets=0, errors=0, captured_bytes=1899, sent_bytes=1899, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1899 | 8.33 pps, 0.00 Mbps
+2026-03-23 22:17:03,034 - __main__ - INFO - Stats: captured_packets=1907, sent_packets=1907, dropped_packets=0, errors=0, captured_bytes=1907, sent_bytes=1907, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1907 | 7.17 pps, 0.00 Mbps
+2026-03-23 22:17:04,126 - __main__ - INFO - Stats: captured_packets=1920, sent_packets=1920, dropped_packets=0, errors=0, captured_bytes=1920, sent_bytes=1920, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1920 | 11.90 pps, 0.00 Mbps
+2026-03-23 22:17:05,901 - __main__ - INFO - Stats: captured_packets=1931, sent_packets=1931, dropped_packets=0, errors=0, captured_bytes=1931, sent_bytes=1931, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1931 | 6.20 pps, 0.00 Mbps
+2026-03-23 22:17:06,914 - __main__ - INFO - Stats: captured_packets=1935, sent_packets=1935, dropped_packets=0, errors=0, captured_bytes=1935, sent_bytes=1935, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=1935 | 3.95 pps, 0.00 Mbps
+2026-03-23 22:17:07,207 - __main__ - INFO - Ctrl+C received. Shutting down passthrough engine.
+2026-03-23 22:17:07,207 - __main__ - INFO - WinDivert handle closed successfully.
+2026-03-23 22:17:07,207 - __main__ - INFO - Passthrough engine stopped.
+2026-03-23 22:21:00,048 - root - INFO - Logging initialized with level INFO to directory ./logs
+2026-03-23 22:21:00,048 - __main__ - INFO - Starting passthrough mode.
+2026-03-23 22:21:00,079 - __main__ - INFO - Constructing WinDivert handle with filter: 'outbound and tcp and ip'
+2026-03-23 22:21:00,087 - __main__ - INFO - WinDivert handle is ready.
+2026-03-23 22:21:00,087 - __main__ - INFO - Passthrough engine started.
+2026-03-23 22:21:00,159 - __main__ - INFO - --- pydivert Packet Diagnostics (first packet) ---
+2026-03-23 22:21:00,159 - __main__ - INFO - Packet type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:21:00,159 - __main__ - INFO - Packet raw length: 1
+2026-03-23 22:21:00,159 - __main__ - INFO - Packet wd_addr type: <class 'pydivert.windivert_dll.structs.WinDivertAddress'>
+2026-03-23 22:21:00,159 - __main__ - INFO - Packet attributes: ['address_family', 'dst_addr', 'ip', 'ipv4', 'ipv6', 'raw', 'recalculate_checksums', 'src_addr', 'tcp', 'udp', 'wd_addr']
+2026-03-23 22:21:00,159 - __main__ - INFO - Handle attributes: ['close', 'is_open', 'open', 'recv', 'send']
+2026-03-23 22:21:00,159 - __main__ - INFO - -------------------------------------------------
+2026-03-23 22:21:01,064 - __main__ - INFO - Stats: captured_packets=3, sent_packets=3, dropped_packets=0, errors=0, captured_bytes=3, sent_bytes=3, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=3 | 2.95 pps, 0.00 Mbps
+2026-03-23 22:21:02,274 - __main__ - INFO - Stats: captured_packets=5, sent_packets=5, dropped_packets=0, errors=0, captured_bytes=5, sent_bytes=5, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=5 | 1.65 pps, 0.00 Mbps
+2026-03-23 22:21:03,589 - __main__ - INFO - Stats: captured_packets=6, sent_packets=6, dropped_packets=0, errors=0, captured_bytes=6, sent_bytes=6, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=6 | 0.76 pps, 0.00 Mbps
+2026-03-23 22:21:04,543 - __main__ - INFO - Ctrl+C received. Shutting down passthrough engine.
+2026-03-23 22:21:04,556 - __main__ - INFO - WinDivert handle closed successfully.
+2026-03-23 22:21:04,557 - __main__ - INFO - Passthrough engine stopped.
+2026-03-23 22:28:17,585 - root - INFO - Logging initialized with level INFO to directory ./logs
+2026-03-23 22:28:17,585 - __main__ - INFO - Starting passthrough mode.
+2026-03-23 22:28:17,630 - __main__ - INFO - Constructing WinDivert handle with filter: 'outbound and tcp and ip'
+2026-03-23 22:28:17,638 - __main__ - INFO - WinDivert handle is ready.
+2026-03-23 22:28:17,638 - __main__ - INFO - Passthrough engine started.
+2026-03-23 22:28:17,638 - __main__ - INFO - --- pydivert Packet Diagnostics (first packet) ---
+2026-03-23 22:28:17,638 - __main__ - INFO - Packet type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:28:17,638 - __main__ - INFO - Packet raw length: 1
+2026-03-23 22:28:17,638 - __main__ - INFO - Packet wd_addr type: <class 'pydivert.windivert_dll.structs.WinDivertAddress'>
+2026-03-23 22:28:17,638 - __main__ - INFO - Packet attributes: ['address_family', 'dst_addr', 'ip', 'ipv4', 'ipv6', 'raw', 'recalculate_checksums', 'src_addr', 'tcp', 'udp', 'wd_addr']
+2026-03-23 22:28:17,638 - __main__ - INFO - Handle attributes: ['close', 'is_open', 'open', 'recv', 'send']
+2026-03-23 22:28:17,638 - __main__ - INFO - -------------------------------------------------
+2026-03-23 22:28:17,638 - __main__ - INFO - --- Packet #1 Diagnostics ---
+2026-03-23 22:28:17,638 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:28:17,638 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:28:17,638 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:28:17,646 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:28:17,646 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:28:17,646 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:28:17,646 - __main__ - INFO - -------------------------
+2026-03-23 22:28:17,646 - __main__ - INFO - --- Packet #2 Diagnostics ---
+2026-03-23 22:28:17,646 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:28:17,646 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:28:17,646 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:28:17,646 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:28:17,646 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:28:17,646 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:28:17,646 - __main__ - INFO - -------------------------
+2026-03-23 22:28:17,646 - __main__ - INFO - --- Packet #3 Diagnostics ---
+2026-03-23 22:28:17,646 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:28:17,646 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:28:17,646 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:28:17,646 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:28:17,646 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:28:17,646 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:28:17,646 - __main__ - INFO - -------------------------
+2026-03-23 22:28:17,678 - __main__ - INFO - --- Packet #4 Diagnostics ---
+2026-03-23 22:28:17,678 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:28:17,678 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:28:17,678 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:28:17,678 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:28:17,678 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:28:17,678 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:28:17,678 - __main__ - INFO - -------------------------
+2026-03-23 22:28:18,001 - __main__ - INFO - --- Packet #5 Diagnostics ---
+2026-03-23 22:28:18,001 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:28:18,001 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:28:18,001 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:28:18,005 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:28:18,005 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:28:18,007 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:28:18,007 - __main__ - INFO - -------------------------
+2026-03-23 22:28:18,186 - __main__ - INFO - --- Packet #6 Diagnostics ---
+2026-03-23 22:28:18,186 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:28:18,198 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:28:18,198 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:28:18,198 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:28:18,198 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:28:18,201 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:28:18,201 - __main__ - INFO - -------------------------
+2026-03-23 22:28:18,768 - __main__ - INFO - --- Packet #7 Diagnostics ---
+2026-03-23 22:28:18,774 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:28:18,775 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:28:18,775 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:28:18,775 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:28:18,775 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:28:18,775 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:28:18,775 - __main__ - INFO - -------------------------
+2026-03-23 22:28:18,779 - __main__ - INFO - Stats: captured_packets=7, sent_packets=7, dropped_packets=0, errors=0, captured_bytes=7, sent_bytes=7, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=7 | 5.87 pps, 0.00 Mbps
+2026-03-23 22:28:19,894 - __main__ - INFO - --- Packet #8 Diagnostics ---
+2026-03-23 22:28:19,894 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:28:19,894 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:28:19,894 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:28:19,894 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:28:19,894 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:28:19,894 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:28:19,894 - __main__ - INFO - -------------------------
+2026-03-23 22:28:19,900 - __main__ - INFO - Stats: captured_packets=8, sent_packets=8, dropped_packets=0, errors=0, captured_bytes=8, sent_bytes=8, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=8 | 0.89 pps, 0.00 Mbps
+2026-03-23 22:28:19,900 - __main__ - INFO - --- Packet #9 Diagnostics ---
+2026-03-23 22:28:19,900 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:28:19,900 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:28:19,902 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:28:19,902 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:28:19,902 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:28:19,902 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:28:19,902 - __main__ - INFO - -------------------------
+2026-03-23 22:28:19,963 - __main__ - INFO - --- Packet #10 Diagnostics ---
+2026-03-23 22:28:19,963 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:28:19,965 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:28:19,965 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:28:19,965 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:28:19,965 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:28:19,965 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:28:19,965 - __main__ - INFO - -------------------------
+2026-03-23 22:28:20,175 - __main__ - INFO - --- Packet #11 Diagnostics ---
+2026-03-23 22:28:20,175 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:28:20,175 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:28:20,175 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:28:20,175 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:28:20,175 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:28:20,175 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:28:20,175 - __main__ - INFO - -------------------------
+2026-03-23 22:28:20,175 - __main__ - INFO - --- Packet #12 Diagnostics ---
+2026-03-23 22:28:20,175 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:28:20,175 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:28:20,175 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:28:20,175 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:28:20,175 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:28:20,175 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:28:20,175 - __main__ - INFO - -------------------------
+2026-03-23 22:28:20,395 - __main__ - INFO - --- Packet #13 Diagnostics ---
+2026-03-23 22:28:20,395 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:28:20,410 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:28:20,410 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:28:20,410 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:28:20,410 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:28:20,410 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:28:20,410 - __main__ - INFO - -------------------------
+2026-03-23 22:28:20,493 - __main__ - INFO - --- Packet #14 Diagnostics ---
+2026-03-23 22:28:20,493 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:28:20,493 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:28:20,493 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:28:20,493 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:28:20,493 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:28:20,493 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:28:20,493 - __main__ - INFO - -------------------------
+2026-03-23 22:28:20,846 - __main__ - INFO - --- Packet #15 Diagnostics ---
+2026-03-23 22:28:20,862 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:28:20,862 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:28:20,862 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:28:20,862 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:28:20,862 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:28:20,862 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:28:20,862 - __main__ - INFO - -------------------------
+2026-03-23 22:28:21,098 - __main__ - INFO - --- Packet #16 Diagnostics ---
+2026-03-23 22:28:21,098 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:28:21,098 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:28:21,098 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:28:21,098 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:28:21,098 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:28:21,098 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:28:21,098 - __main__ - INFO - -------------------------
+2026-03-23 22:28:21,098 - __main__ - INFO - Stats: captured_packets=16, sent_packets=16, dropped_packets=0, errors=0, captured_bytes=16, sent_bytes=16, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=16 | 6.68 pps, 0.00 Mbps
+2026-03-23 22:28:21,740 - __main__ - INFO - --- Packet #17 Diagnostics ---
+2026-03-23 22:28:21,740 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:28:21,740 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:28:21,747 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:28:21,747 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:28:21,747 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:28:21,747 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:28:21,750 - __main__ - INFO - -------------------------
+2026-03-23 22:28:22,060 - __main__ - INFO - --- Packet #18 Diagnostics ---
+2026-03-23 22:28:22,060 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:28:22,060 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:28:22,060 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:28:22,060 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:28:22,060 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:28:22,069 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:28:22,069 - __main__ - INFO - -------------------------
+2026-03-23 22:28:22,182 - __main__ - INFO - --- Packet #19 Diagnostics ---
+2026-03-23 22:28:22,198 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:28:22,198 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:28:22,198 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:28:22,198 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:28:22,198 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:28:22,198 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:28:22,198 - __main__ - INFO - -------------------------
+2026-03-23 22:28:22,198 - __main__ - INFO - Stats: captured_packets=19, sent_packets=19, dropped_packets=0, errors=0, captured_bytes=19, sent_bytes=19, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=19 | 2.73 pps, 0.00 Mbps
+2026-03-23 22:28:22,298 - __main__ - INFO - --- Packet #20 Diagnostics ---
+2026-03-23 22:28:22,298 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:28:22,300 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:28:22,300 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:28:22,300 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:28:22,300 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:28:22,300 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:28:22,300 - __main__ - INFO - -------------------------
+2026-03-23 22:28:23,502 - __main__ - INFO - Stats: captured_packets=22, sent_packets=22, dropped_packets=0, errors=0, captured_bytes=22, sent_bytes=22, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=22 | 2.30 pps, 0.00 Mbps
+2026-03-23 22:28:24,576 - __main__ - INFO - Stats: captured_packets=38, sent_packets=38, dropped_packets=0, errors=0, captured_bytes=38, sent_bytes=38, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=38 | 14.90 pps, 0.00 Mbps
+2026-03-23 22:28:25,583 - __main__ - INFO - Stats: captured_packets=50, sent_packets=50, dropped_packets=0, errors=0, captured_bytes=50, sent_bytes=50, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=50 | 11.91 pps, 0.00 Mbps
+2026-03-23 22:28:26,627 - __main__ - INFO - Stats: captured_packets=61, sent_packets=61, dropped_packets=0, errors=0, captured_bytes=61, sent_bytes=61, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=61 | 10.54 pps, 0.00 Mbps
+2026-03-23 22:28:27,638 - __main__ - INFO - Stats: captured_packets=78, sent_packets=78, dropped_packets=0, errors=0, captured_bytes=78, sent_bytes=78, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=78 | 16.83 pps, 0.00 Mbps
+2026-03-23 22:28:28,754 - __main__ - INFO - Stats: captured_packets=92, sent_packets=92, dropped_packets=0, errors=0, captured_bytes=92, sent_bytes=92, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=92 | 12.54 pps, 0.00 Mbps
+2026-03-23 22:28:29,824 - __main__ - INFO - Stats: captured_packets=100, sent_packets=100, dropped_packets=0, errors=0, captured_bytes=100, sent_bytes=100, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=100 | 7.48 pps, 0.00 Mbps
+2026-03-23 22:28:31,125 - __main__ - INFO - Stats: captured_packets=105, sent_packets=105, dropped_packets=0, errors=0, captured_bytes=105, sent_bytes=105, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=105 | 3.84 pps, 0.00 Mbps
+2026-03-23 22:28:32,233 - __main__ - INFO - Stats: captured_packets=122, sent_packets=122, dropped_packets=0, errors=0, captured_bytes=122, sent_bytes=122, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=122 | 15.36 pps, 0.00 Mbps
+2026-03-23 22:28:33,248 - __main__ - INFO - Stats: captured_packets=137, sent_packets=137, dropped_packets=0, errors=0, captured_bytes=137, sent_bytes=137, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=137 | 14.77 pps, 0.00 Mbps
+2026-03-23 22:28:34,352 - __main__ - INFO - Stats: captured_packets=152, sent_packets=152, dropped_packets=0, errors=0, captured_bytes=152, sent_bytes=152, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=152 | 13.59 pps, 0.00 Mbps
+2026-03-23 22:28:35,437 - __main__ - INFO - Stats: captured_packets=161, sent_packets=161, dropped_packets=0, errors=0, captured_bytes=161, sent_bytes=161, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=161 | 8.29 pps, 0.00 Mbps
+2026-03-23 22:28:36,583 - __main__ - INFO - Stats: captured_packets=171, sent_packets=171, dropped_packets=0, errors=0, captured_bytes=171, sent_bytes=171, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=171 | 8.72 pps, 0.00 Mbps
+2026-03-23 22:28:37,593 - __main__ - INFO - Stats: captured_packets=179, sent_packets=179, dropped_packets=0, errors=0, captured_bytes=179, sent_bytes=179, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=179 | 7.92 pps, 0.00 Mbps
+2026-03-23 22:28:38,621 - __main__ - INFO - Stats: captured_packets=190, sent_packets=190, dropped_packets=0, errors=0, captured_bytes=190, sent_bytes=190, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=190 | 10.70 pps, 0.00 Mbps
+2026-03-23 22:28:39,634 - __main__ - INFO - Stats: captured_packets=202, sent_packets=202, dropped_packets=0, errors=0, captured_bytes=202, sent_bytes=202, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=202 | 11.85 pps, 0.00 Mbps
+2026-03-23 22:28:40,682 - __main__ - INFO - Stats: captured_packets=211, sent_packets=211, dropped_packets=0, errors=0, captured_bytes=211, sent_bytes=211, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=211 | 8.59 pps, 0.00 Mbps
+2026-03-23 22:28:41,699 - __main__ - INFO - Stats: captured_packets=227, sent_packets=227, dropped_packets=0, errors=0, captured_bytes=227, sent_bytes=227, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=227 | 15.72 pps, 0.00 Mbps
+2026-03-23 22:28:42,963 - __main__ - INFO - Stats: captured_packets=238, sent_packets=238, dropped_packets=0, errors=0, captured_bytes=238, sent_bytes=238, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=238 | 8.70 pps, 0.00 Mbps
+2026-03-23 22:28:43,971 - __main__ - INFO - Stats: captured_packets=242, sent_packets=242, dropped_packets=0, errors=0, captured_bytes=242, sent_bytes=242, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=242 | 3.97 pps, 0.00 Mbps
+2026-03-23 22:28:45,169 - __main__ - INFO - Stats: captured_packets=255, sent_packets=255, dropped_packets=0, errors=0, captured_bytes=255, sent_bytes=255, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=255 | 10.85 pps, 0.00 Mbps
+2026-03-23 22:28:46,175 - __main__ - INFO - Stats: captured_packets=267, sent_packets=267, dropped_packets=0, errors=0, captured_bytes=267, sent_bytes=267, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=267 | 11.92 pps, 0.00 Mbps
+2026-03-23 22:28:47,277 - __main__ - INFO - Stats: captured_packets=280, sent_packets=280, dropped_packets=0, errors=0, captured_bytes=280, sent_bytes=280, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=280 | 11.80 pps, 0.00 Mbps
+2026-03-23 22:28:48,434 - __main__ - INFO - Stats: captured_packets=295, sent_packets=295, dropped_packets=0, errors=0, captured_bytes=295, sent_bytes=295, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=295 | 12.96 pps, 0.00 Mbps
+2026-03-23 22:28:49,457 - __main__ - INFO - Stats: captured_packets=316, sent_packets=316, dropped_packets=0, errors=0, captured_bytes=316, sent_bytes=316, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=316 | 20.52 pps, 0.00 Mbps
+2026-03-23 22:28:50,634 - __main__ - INFO - Stats: captured_packets=332, sent_packets=332, dropped_packets=0, errors=0, captured_bytes=332, sent_bytes=332, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=332 | 13.59 pps, 0.00 Mbps
+2026-03-23 22:28:51,686 - __main__ - INFO - Stats: captured_packets=343, sent_packets=343, dropped_packets=0, errors=0, captured_bytes=343, sent_bytes=343, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=343 | 10.46 pps, 0.00 Mbps
+2026-03-23 22:28:52,736 - __main__ - INFO - Stats: captured_packets=355, sent_packets=355, dropped_packets=0, errors=0, captured_bytes=355, sent_bytes=355, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=355 | 11.44 pps, 0.00 Mbps
+2026-03-23 22:28:53,907 - __main__ - INFO - Stats: captured_packets=365, sent_packets=365, dropped_packets=0, errors=0, captured_bytes=365, sent_bytes=365, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=365 | 8.53 pps, 0.00 Mbps
+2026-03-23 22:28:55,712 - __main__ - INFO - Stats: captured_packets=376, sent_packets=376, dropped_packets=0, errors=0, captured_bytes=376, sent_bytes=376, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=376 | 6.09 pps, 0.00 Mbps
+2026-03-23 22:28:56,755 - __main__ - INFO - Stats: captured_packets=382, sent_packets=382, dropped_packets=0, errors=0, captured_bytes=382, sent_bytes=382, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=382 | 5.75 pps, 0.00 Mbps
+2026-03-23 22:28:58,018 - __main__ - INFO - Stats: captured_packets=386, sent_packets=386, dropped_packets=0, errors=0, captured_bytes=386, sent_bytes=386, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=386 | 3.17 pps, 0.00 Mbps
+2026-03-23 22:28:59,119 - __main__ - INFO - Stats: captured_packets=390, sent_packets=390, dropped_packets=0, errors=0, captured_bytes=390, sent_bytes=390, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=390 | 3.63 pps, 0.00 Mbps
+2026-03-23 22:29:00,131 - __main__ - INFO - Stats: captured_packets=394, sent_packets=394, dropped_packets=0, errors=0, captured_bytes=394, sent_bytes=394, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=394 | 3.96 pps, 0.00 Mbps
+2026-03-23 22:29:01,306 - __main__ - INFO - Stats: captured_packets=405, sent_packets=405, dropped_packets=0, errors=0, captured_bytes=405, sent_bytes=405, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=405 | 9.36 pps, 0.00 Mbps
+2026-03-23 22:29:02,389 - __main__ - INFO - Stats: captured_packets=413, sent_packets=413, dropped_packets=0, errors=0, captured_bytes=413, sent_bytes=413, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=413 | 7.39 pps, 0.00 Mbps
+2026-03-23 22:29:03,558 - __main__ - INFO - Stats: captured_packets=425, sent_packets=425, dropped_packets=0, errors=0, captured_bytes=425, sent_bytes=425, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=425 | 10.26 pps, 0.00 Mbps
+2026-03-23 22:29:04,895 - __main__ - INFO - Stats: captured_packets=432, sent_packets=432, dropped_packets=0, errors=0, captured_bytes=432, sent_bytes=432, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=432 | 5.24 pps, 0.00 Mbps
+2026-03-23 22:29:06,033 - __main__ - INFO - Stats: captured_packets=442, sent_packets=442, dropped_packets=0, errors=0, captured_bytes=442, sent_bytes=442, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=442 | 8.79 pps, 0.00 Mbps
+2026-03-23 22:29:07,176 - __main__ - INFO - Stats: captured_packets=452, sent_packets=452, dropped_packets=0, errors=0, captured_bytes=452, sent_bytes=452, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=452 | 8.75 pps, 0.00 Mbps
+2026-03-23 22:29:08,194 - __main__ - INFO - Stats: captured_packets=462, sent_packets=462, dropped_packets=0, errors=0, captured_bytes=462, sent_bytes=462, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=462 | 9.82 pps, 0.00 Mbps
+2026-03-23 22:29:09,201 - __main__ - INFO - Stats: captured_packets=474, sent_packets=474, dropped_packets=0, errors=0, captured_bytes=474, sent_bytes=474, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=474 | 11.92 pps, 0.00 Mbps
+2026-03-23 22:29:10,772 - __main__ - INFO - Stats: captured_packets=485, sent_packets=485, dropped_packets=0, errors=0, captured_bytes=485, sent_bytes=485, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=485 | 7.00 pps, 0.00 Mbps
+2026-03-23 22:29:11,924 - __main__ - INFO - Stats: captured_packets=492, sent_packets=492, dropped_packets=0, errors=0, captured_bytes=492, sent_bytes=492, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=492 | 6.08 pps, 0.00 Mbps
+2026-03-23 22:29:13,328 - __main__ - INFO - Stats: captured_packets=495, sent_packets=495, dropped_packets=0, errors=0, captured_bytes=495, sent_bytes=495, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=495 | 2.14 pps, 0.00 Mbps
+2026-03-23 22:29:14,395 - __main__ - INFO - Stats: captured_packets=501, sent_packets=501, dropped_packets=0, errors=0, captured_bytes=501, sent_bytes=501, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=501 | 5.62 pps, 0.00 Mbps
+2026-03-23 22:29:15,522 - __main__ - INFO - Stats: captured_packets=513, sent_packets=513, dropped_packets=0, errors=0, captured_bytes=513, sent_bytes=513, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=513 | 10.65 pps, 0.00 Mbps
+2026-03-23 22:29:16,885 - __main__ - INFO - Stats: captured_packets=521, sent_packets=521, dropped_packets=0, errors=0, captured_bytes=521, sent_bytes=521, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=521 | 5.87 pps, 0.00 Mbps
+2026-03-23 22:29:17,886 - __main__ - INFO - Stats: captured_packets=537, sent_packets=537, dropped_packets=0, errors=0, captured_bytes=537, sent_bytes=537, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=537 | 15.99 pps, 0.00 Mbps
+2026-03-23 22:29:19,013 - __main__ - INFO - Stats: captured_packets=546, sent_packets=546, dropped_packets=0, errors=0, captured_bytes=546, sent_bytes=546, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=546 | 7.98 pps, 0.00 Mbps
+2026-03-23 22:29:20,096 - __main__ - INFO - Stats: captured_packets=551, sent_packets=551, dropped_packets=0, errors=0, captured_bytes=551, sent_bytes=551, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=551 | 4.61 pps, 0.00 Mbps
+2026-03-23 22:29:21,161 - __main__ - INFO - Stats: captured_packets=557, sent_packets=557, dropped_packets=0, errors=0, captured_bytes=557, sent_bytes=557, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=557 | 5.63 pps, 0.00 Mbps
+2026-03-23 22:29:22,335 - __main__ - INFO - Stats: captured_packets=570, sent_packets=570, dropped_packets=0, errors=0, captured_bytes=570, sent_bytes=570, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=570 | 11.08 pps, 0.00 Mbps
+2026-03-23 22:29:23,413 - __main__ - INFO - Stats: captured_packets=577, sent_packets=577, dropped_packets=0, errors=0, captured_bytes=577, sent_bytes=577, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=577 | 6.49 pps, 0.00 Mbps
+2026-03-23 22:29:24,601 - __main__ - INFO - Stats: captured_packets=587, sent_packets=587, dropped_packets=0, errors=0, captured_bytes=587, sent_bytes=587, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=587 | 8.41 pps, 0.00 Mbps
+2026-03-23 22:29:25,630 - __main__ - INFO - Stats: captured_packets=591, sent_packets=591, dropped_packets=0, errors=0, captured_bytes=591, sent_bytes=591, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=591 | 3.89 pps, 0.00 Mbps
+2026-03-23 22:29:26,646 - __main__ - INFO - Stats: captured_packets=598, sent_packets=598, dropped_packets=0, errors=0, captured_bytes=598, sent_bytes=598, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=598 | 6.89 pps, 0.00 Mbps
+2026-03-23 22:29:27,659 - __main__ - INFO - Stats: captured_packets=603, sent_packets=603, dropped_packets=0, errors=0, captured_bytes=603, sent_bytes=603, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=603 | 4.94 pps, 0.00 Mbps
+2026-03-23 22:29:28,661 - __main__ - INFO - Stats: captured_packets=607, sent_packets=607, dropped_packets=0, errors=0, captured_bytes=607, sent_bytes=607, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=607 | 3.99 pps, 0.00 Mbps
+2026-03-23 22:29:29,803 - __main__ - INFO - Stats: captured_packets=615, sent_packets=615, dropped_packets=0, errors=0, captured_bytes=615, sent_bytes=615, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=615 | 7.01 pps, 0.00 Mbps
+2026-03-23 22:29:31,186 - __main__ - INFO - Stats: captured_packets=622, sent_packets=622, dropped_packets=0, errors=0, captured_bytes=622, sent_bytes=622, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=622 | 5.06 pps, 0.00 Mbps
+2026-03-23 22:29:32,552 - __main__ - INFO - Stats: captured_packets=627, sent_packets=627, dropped_packets=0, errors=0, captured_bytes=627, sent_bytes=627, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=627 | 3.66 pps, 0.00 Mbps
+2026-03-23 22:29:33,649 - __main__ - INFO - Stats: captured_packets=631, sent_packets=631, dropped_packets=0, errors=0, captured_bytes=631, sent_bytes=631, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=631 | 3.64 pps, 0.00 Mbps
+2026-03-23 22:29:34,685 - __main__ - INFO - Stats: captured_packets=634, sent_packets=634, dropped_packets=0, errors=0, captured_bytes=634, sent_bytes=634, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=634 | 2.90 pps, 0.00 Mbps
+2026-03-23 22:29:35,843 - __main__ - INFO - Stats: captured_packets=639, sent_packets=639, dropped_packets=0, errors=0, captured_bytes=639, sent_bytes=639, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=639 | 4.32 pps, 0.00 Mbps
+2026-03-23 22:29:37,036 - __main__ - INFO - Stats: captured_packets=645, sent_packets=645, dropped_packets=0, errors=0, captured_bytes=645, sent_bytes=645, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=645 | 5.03 pps, 0.00 Mbps
+2026-03-23 22:29:38,041 - __main__ - INFO - Stats: captured_packets=649, sent_packets=649, dropped_packets=0, errors=0, captured_bytes=649, sent_bytes=649, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=649 | 3.98 pps, 0.00 Mbps
+2026-03-23 22:29:39,201 - __main__ - INFO - Stats: captured_packets=656, sent_packets=656, dropped_packets=0, errors=0, captured_bytes=656, sent_bytes=656, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=656 | 6.04 pps, 0.00 Mbps
+2026-03-23 22:29:39,630 - __main__ - INFO - Ctrl+C received. Shutting down passthrough engine.
+2026-03-23 22:29:39,630 - __main__ - INFO - WinDivert handle closed successfully.
+2026-03-23 22:29:39,630 - __main__ - INFO - Passthrough engine stopped.
+2026-03-23 22:30:54,914 - root - INFO - Logging initialized with level INFO to directory ./logs
+2026-03-23 22:30:54,921 - __main__ - INFO - Starting passthrough mode.
+2026-03-23 22:30:54,946 - __main__ - INFO - Constructing WinDivert handle with filter: 'outbound and tcp and ip'
+2026-03-23 22:30:54,954 - __main__ - INFO - WinDivert handle is ready.
+2026-03-23 22:30:54,954 - __main__ - INFO - Passthrough engine started.
+2026-03-23 22:30:55,656 - __main__ - INFO - --- pydivert Packet Diagnostics (first packet) ---
+2026-03-23 22:30:55,656 - __main__ - INFO - Packet type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:30:55,665 - __main__ - INFO - Packet raw length: 1
+2026-03-23 22:30:55,665 - __main__ - INFO - Packet wd_addr type: <class 'pydivert.windivert_dll.structs.WinDivertAddress'>
+2026-03-23 22:30:55,665 - __main__ - INFO - Packet attributes: ['address_family', 'dst_addr', 'ip', 'ipv4', 'ipv6', 'raw', 'recalculate_checksums', 'src_addr', 'tcp', 'udp', 'wd_addr']
+2026-03-23 22:30:55,665 - __main__ - INFO - Handle attributes: ['close', 'is_open', 'open', 'recv', 'send']
+2026-03-23 22:30:55,665 - __main__ - INFO - -------------------------------------------------
+2026-03-23 22:30:55,665 - __main__ - INFO - --- Packet #1 Diagnostics ---
+2026-03-23 22:30:55,665 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:30:55,665 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:30:55,665 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:30:55,672 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:30:55,672 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:30:55,672 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:30:55,672 - __main__ - INFO - -------------------------
+2026-03-23 22:30:55,840 - __main__ - INFO - --- Packet #2 Diagnostics ---
+2026-03-23 22:30:55,846 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:30:55,846 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:30:55,847 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:30:55,847 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:30:55,847 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:30:55,850 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:30:55,850 - __main__ - INFO - -------------------------
+2026-03-23 22:30:56,579 - __main__ - INFO - --- Packet #3 Diagnostics ---
+2026-03-23 22:30:56,579 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:30:56,579 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:30:56,579 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:30:56,579 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:30:56,579 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:30:56,587 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:30:56,587 - __main__ - INFO - -------------------------
+2026-03-23 22:30:56,587 - __main__ - INFO - Stats: captured_packets=3, sent_packets=3, dropped_packets=0, errors=0, captured_bytes=3, sent_bytes=3, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=3 | 1.80 pps, 0.00 Mbps
+2026-03-23 22:30:57,281 - __main__ - INFO - --- Packet #4 Diagnostics ---
+2026-03-23 22:30:57,281 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:30:57,281 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:30:57,281 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:30:57,290 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:30:57,290 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:30:57,291 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:30:57,291 - __main__ - INFO - -------------------------
+2026-03-23 22:30:57,305 - __main__ - INFO - --- Packet #5 Diagnostics ---
+2026-03-23 22:30:57,305 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:30:57,312 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:30:57,313 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:30:57,313 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:30:57,314 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:30:57,314 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:30:57,314 - __main__ - INFO - -------------------------
+2026-03-23 22:30:57,389 - __main__ - INFO - --- Packet #6 Diagnostics ---
+2026-03-23 22:30:57,389 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:30:57,389 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:30:57,389 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:30:57,389 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:30:57,389 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:30:57,389 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:30:57,389 - __main__ - INFO - -------------------------
+2026-03-23 22:30:57,643 - __main__ - INFO - --- Packet #7 Diagnostics ---
+2026-03-23 22:30:57,645 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:30:57,645 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:30:57,647 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:30:57,647 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:30:57,647 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:30:57,647 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:30:57,647 - __main__ - INFO - -------------------------
+2026-03-23 22:30:57,647 - __main__ - INFO - Stats: captured_packets=7, sent_packets=7, dropped_packets=0, errors=0, captured_bytes=7, sent_bytes=7, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=7 | 3.77 pps, 0.00 Mbps
+2026-03-23 22:30:57,689 - __main__ - INFO - --- Packet #8 Diagnostics ---
+2026-03-23 22:30:57,689 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:30:57,689 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:30:57,689 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:30:57,689 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:30:57,689 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:30:57,689 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:30:57,689 - __main__ - INFO - -------------------------
+2026-03-23 22:30:57,689 - __main__ - INFO - --- Packet #9 Diagnostics ---
+2026-03-23 22:30:57,689 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:30:57,697 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:30:57,698 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:30:57,698 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:30:57,699 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:30:57,699 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:30:57,699 - __main__ - INFO - -------------------------
+2026-03-23 22:30:57,763 - __main__ - INFO - --- Packet #10 Diagnostics ---
+2026-03-23 22:30:57,763 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:30:57,763 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:30:57,763 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:30:57,763 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:30:57,763 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:30:57,763 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:30:57,763 - __main__ - INFO - -------------------------
+2026-03-23 22:30:57,872 - __main__ - INFO - --- Packet #11 Diagnostics ---
+2026-03-23 22:30:57,873 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:30:57,873 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:30:57,873 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:30:57,873 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:30:57,873 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:30:57,873 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:30:57,873 - __main__ - INFO - -------------------------
+2026-03-23 22:30:58,222 - __main__ - INFO - --- Packet #12 Diagnostics ---
+2026-03-23 22:30:58,231 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:30:58,231 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:30:58,231 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:30:58,231 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:30:58,231 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:30:58,231 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:30:58,231 - __main__ - INFO - -------------------------
+2026-03-23 22:30:58,296 - __main__ - INFO - --- Packet #13 Diagnostics ---
+2026-03-23 22:30:58,296 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:30:58,296 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:30:58,296 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:30:58,300 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:30:58,300 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:30:58,300 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:30:58,300 - __main__ - INFO - -------------------------
+2026-03-23 22:30:58,687 - __main__ - INFO - --- Packet #14 Diagnostics ---
+2026-03-23 22:30:58,687 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:30:58,687 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:30:58,687 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:30:58,687 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:30:58,687 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:30:58,687 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:30:58,695 - __main__ - INFO - -------------------------
+2026-03-23 22:30:58,695 - __main__ - INFO - Stats: captured_packets=14, sent_packets=14, dropped_packets=0, errors=0, captured_bytes=14, sent_bytes=14, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=14 | 6.68 pps, 0.00 Mbps
+2026-03-23 22:30:58,854 - __main__ - INFO - --- Packet #15 Diagnostics ---
+2026-03-23 22:30:58,854 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:30:58,854 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:30:58,854 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:30:58,854 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:30:58,854 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:30:58,860 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:30:58,860 - __main__ - INFO - -------------------------
+2026-03-23 22:30:58,930 - __main__ - INFO - --- Packet #16 Diagnostics ---
+2026-03-23 22:30:58,930 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:30:58,930 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:30:58,930 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:30:58,930 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:30:58,930 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:30:58,930 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:30:58,930 - __main__ - INFO - -------------------------
+2026-03-23 22:30:59,161 - __main__ - INFO - --- Packet #17 Diagnostics ---
+2026-03-23 22:30:59,161 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:30:59,161 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:30:59,161 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:30:59,161 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:30:59,161 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:30:59,161 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:30:59,161 - __main__ - INFO - -------------------------
+2026-03-23 22:30:59,469 - __main__ - INFO - --- Packet #18 Diagnostics ---
+2026-03-23 22:30:59,469 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:30:59,469 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:30:59,469 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:30:59,469 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:30:59,469 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:30:59,469 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:30:59,469 - __main__ - INFO - -------------------------
+2026-03-23 22:30:59,506 - __main__ - INFO - --- Packet #19 Diagnostics ---
+2026-03-23 22:30:59,506 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:30:59,508 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:30:59,510 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:30:59,511 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:30:59,511 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:30:59,511 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:30:59,511 - __main__ - INFO - -------------------------
+2026-03-23 22:30:59,642 - __main__ - INFO - --- Packet #20 Diagnostics ---
+2026-03-23 22:30:59,642 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:30:59,642 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:30:59,642 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:30:59,642 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:30:59,650 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:30:59,651 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:30:59,651 - __main__ - INFO - -------------------------
+2026-03-23 22:30:59,844 - __main__ - INFO - Stats: captured_packets=21, sent_packets=21, dropped_packets=0, errors=0, captured_bytes=21, sent_bytes=21, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=21 | 6.09 pps, 0.00 Mbps
+2026-03-23 22:31:01,228 - __main__ - INFO - Stats: captured_packets=25, sent_packets=25, dropped_packets=0, errors=0, captured_bytes=25, sent_bytes=25, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=25 | 2.89 pps, 0.00 Mbps
+2026-03-23 22:31:02,447 - __main__ - INFO - Stats: captured_packets=32, sent_packets=32, dropped_packets=0, errors=0, captured_bytes=32, sent_bytes=32, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=32 | 5.75 pps, 0.00 Mbps
+2026-03-23 22:31:03,642 - __main__ - INFO - Stats: captured_packets=36, sent_packets=36, dropped_packets=0, errors=0, captured_bytes=36, sent_bytes=36, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=36 | 3.35 pps, 0.00 Mbps
+2026-03-23 22:31:05,085 - __main__ - INFO - Stats: captured_packets=46, sent_packets=46, dropped_packets=0, errors=0, captured_bytes=46, sent_bytes=46, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=46 | 6.93 pps, 0.00 Mbps
+2026-03-23 22:31:06,131 - __main__ - INFO - Stats: captured_packets=52, sent_packets=52, dropped_packets=0, errors=0, captured_bytes=52, sent_bytes=52, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=52 | 5.74 pps, 0.00 Mbps
+2026-03-23 22:31:07,157 - __main__ - INFO - Stats: captured_packets=75, sent_packets=75, dropped_packets=0, errors=0, captured_bytes=75, sent_bytes=75, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=75 | 22.42 pps, 0.00 Mbps
+2026-03-23 22:31:08,273 - __main__ - INFO - Stats: captured_packets=89, sent_packets=89, dropped_packets=0, errors=0, captured_bytes=89, sent_bytes=89, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=89 | 12.54 pps, 0.00 Mbps
+2026-03-23 22:31:09,286 - __main__ - INFO - Stats: captured_packets=104, sent_packets=104, dropped_packets=0, errors=0, captured_bytes=104, sent_bytes=104, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=104 | 14.81 pps, 0.00 Mbps
+2026-03-23 22:31:10,294 - __main__ - INFO - Ctrl+C received. Shutting down passthrough engine.
+2026-03-23 22:31:10,303 - __main__ - INFO - WinDivert handle closed successfully.
+2026-03-23 22:31:10,304 - __main__ - INFO - Passthrough engine stopped.
+2026-03-23 22:31:29,811 - root - INFO - Logging initialized with level INFO to directory ./logs
+2026-03-23 22:31:29,811 - __main__ - INFO - Starting passthrough mode.
+2026-03-23 22:31:29,844 - __main__ - INFO - Constructing WinDivert handle with filter: 'outbound and tcp and ip'
+2026-03-23 22:31:29,852 - __main__ - INFO - WinDivert handle is ready.
+2026-03-23 22:31:29,852 - __main__ - INFO - Passthrough engine started.
+2026-03-23 22:31:30,747 - __main__ - INFO - --- pydivert Packet Diagnostics (first packet) ---
+2026-03-23 22:31:30,747 - __main__ - INFO - Packet type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:31:30,747 - __main__ - INFO - Packet raw length: 1
+2026-03-23 22:31:30,747 - __main__ - INFO - Packet wd_addr type: <class 'pydivert.windivert_dll.structs.WinDivertAddress'>
+2026-03-23 22:31:30,747 - __main__ - INFO - Packet attributes: ['address_family', 'dst_addr', 'ip', 'ipv4', 'ipv6', 'raw', 'recalculate_checksums', 'src_addr', 'tcp', 'udp', 'wd_addr']
+2026-03-23 22:31:30,751 - __main__ - INFO - Handle attributes: ['close', 'is_open', 'open', 'recv', 'send']
+2026-03-23 22:31:30,752 - __main__ - INFO - -------------------------------------------------
+2026-03-23 22:31:30,753 - __main__ - INFO - --- Packet #1 Diagnostics ---
+2026-03-23 22:31:30,753 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:31:30,755 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:31:30,755 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:31:30,755 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:31:30,755 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:31:30,755 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:31:30,755 - __main__ - INFO - -------------------------
+2026-03-23 22:31:31,058 - __main__ - INFO - --- Packet #2 Diagnostics ---
+2026-03-23 22:31:31,058 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:31:31,058 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:31:31,060 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:31:31,060 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:31:31,060 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:31:31,060 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:31:31,060 - __main__ - INFO - -------------------------
+2026-03-23 22:31:31,060 - __main__ - INFO - Stats: captured_packets=2, sent_packets=2, dropped_packets=0, errors=0, captured_bytes=2, sent_bytes=2, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=2 | 1.61 pps, 0.00 Mbps
+2026-03-23 22:31:31,372 - __main__ - INFO - --- Packet #3 Diagnostics ---
+2026-03-23 22:31:31,373 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:31:31,373 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:31:31,373 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:31:31,373 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:31:31,373 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:31:31,373 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:31:31,373 - __main__ - INFO - -------------------------
+2026-03-23 22:31:31,976 - __main__ - INFO - --- Packet #4 Diagnostics ---
+2026-03-23 22:31:31,976 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:31:31,978 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:31:31,978 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:31:31,979 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:31:31,979 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:31:31,979 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:31:31,979 - __main__ - INFO - -------------------------
+2026-03-23 22:31:33,180 - __main__ - INFO - --- Packet #5 Diagnostics ---
+2026-03-23 22:31:33,180 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:31:33,180 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:31:33,180 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:31:33,180 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:31:33,180 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:31:33,180 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:31:33,180 - __main__ - INFO - -------------------------
+2026-03-23 22:31:33,180 - __main__ - INFO - Stats: captured_packets=5, sent_packets=5, dropped_packets=0, errors=0, captured_bytes=5, sent_bytes=5, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=5 | 1.42 pps, 0.00 Mbps
+2026-03-23 22:31:33,895 - __main__ - INFO - --- Packet #6 Diagnostics ---
+2026-03-23 22:31:33,896 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:31:33,897 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:31:33,898 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:31:33,898 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:31:33,898 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:31:33,898 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:31:33,898 - __main__ - INFO - -------------------------
+2026-03-23 22:31:33,898 - __main__ - INFO - --- Packet #7 Diagnostics ---
+2026-03-23 22:31:33,898 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:31:33,898 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:31:33,898 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:31:33,898 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:31:33,906 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:31:33,906 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:31:33,906 - __main__ - INFO - -------------------------
+2026-03-23 22:31:33,906 - __main__ - INFO - --- Packet #8 Diagnostics ---
+2026-03-23 22:31:33,906 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:31:33,906 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:31:33,906 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:31:33,906 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:31:33,906 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:31:33,906 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:31:33,906 - __main__ - INFO - -------------------------
+2026-03-23 22:31:33,906 - __main__ - INFO - --- Packet #9 Diagnostics ---
+2026-03-23 22:31:33,914 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:31:33,914 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:31:33,914 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:31:33,914 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:31:33,914 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:31:33,914 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:31:33,914 - __main__ - INFO - -------------------------
+2026-03-23 22:31:33,914 - __main__ - INFO - --- Packet #10 Diagnostics ---
+2026-03-23 22:31:33,914 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:31:33,914 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:31:33,914 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:31:33,914 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:31:33,914 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:31:33,914 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:31:33,922 - __main__ - INFO - -------------------------
+2026-03-23 22:31:34,133 - __main__ - INFO - --- Packet #11 Diagnostics ---
+2026-03-23 22:31:34,133 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:31:34,133 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:31:34,133 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:31:34,133 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:31:34,133 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:31:34,133 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:31:34,133 - __main__ - INFO - -------------------------
+2026-03-23 22:31:34,199 - __main__ - INFO - --- Packet #12 Diagnostics ---
+2026-03-23 22:31:34,199 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:31:34,199 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:31:34,199 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:31:34,199 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:31:34,199 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:31:34,199 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:31:34,199 - __main__ - INFO - -------------------------
+2026-03-23 22:31:34,199 - __main__ - INFO - Stats: captured_packets=12, sent_packets=12, dropped_packets=0, errors=0, captured_bytes=12, sent_bytes=12, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=12 | 6.87 pps, 0.00 Mbps
+2026-03-23 22:31:34,216 - __main__ - INFO - --- Packet #13 Diagnostics ---
+2026-03-23 22:31:34,216 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:31:34,216 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:31:34,216 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:31:34,216 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:31:34,216 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:31:34,216 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:31:34,216 - __main__ - INFO - -------------------------
+2026-03-23 22:31:34,216 - __main__ - INFO - --- Packet #14 Diagnostics ---
+2026-03-23 22:31:34,224 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:31:34,224 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:31:34,224 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:31:34,224 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:31:34,224 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:31:34,224 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:31:34,224 - __main__ - INFO - -------------------------
+2026-03-23 22:31:34,232 - __main__ - INFO - --- Packet #15 Diagnostics ---
+2026-03-23 22:31:34,232 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:31:34,232 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:31:34,232 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:31:34,232 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:31:34,232 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:31:34,232 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:31:34,232 - __main__ - INFO - -------------------------
+2026-03-23 22:31:34,232 - __main__ - INFO - --- Packet #16 Diagnostics ---
+2026-03-23 22:31:34,232 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:31:34,232 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:31:34,241 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:31:34,241 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:31:34,241 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:31:34,241 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:31:34,241 - __main__ - INFO - -------------------------
+2026-03-23 22:31:34,241 - __main__ - INFO - --- Packet #17 Diagnostics ---
+2026-03-23 22:31:34,241 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:31:34,241 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:31:34,241 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:31:34,241 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:31:34,241 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:31:34,249 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:31:34,249 - __main__ - INFO - -------------------------
+2026-03-23 22:31:34,263 - __main__ - INFO - --- Packet #18 Diagnostics ---
+2026-03-23 22:31:34,263 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:31:34,263 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:31:34,265 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:31:34,265 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:31:34,265 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:31:34,265 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:31:34,265 - __main__ - INFO - -------------------------
+2026-03-23 22:31:34,291 - __main__ - INFO - --- Packet #19 Diagnostics ---
+2026-03-23 22:31:34,291 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:31:34,292 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:31:34,292 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:31:34,292 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:31:34,292 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:31:34,292 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:31:34,292 - __main__ - INFO - -------------------------
+2026-03-23 22:31:34,505 - __main__ - INFO - --- Packet #20 Diagnostics ---
+2026-03-23 22:31:34,505 - __main__ - INFO -   - Type: <class 'pydivert.packet.Packet'>
+2026-03-23 22:31:34,505 - __main__ - INFO -   - Raw Type: <class 'memoryview'>
+2026-03-23 22:31:34,505 - __main__ - INFO -   - Raw memoryview: nbytes=1, format='B', itemsize=1
+2026-03-23 22:31:34,505 - __main__ - INFO -   - Raw Hex (first 64 bytes): 45
+2026-03-23 22:31:34,505 - __main__ - INFO -   - Src Addr: None
+2026-03-23 22:31:34,505 - __main__ - INFO -   - Dst Addr: None
+2026-03-23 22:31:34,505 - __main__ - INFO - -------------------------
+2026-03-23 22:31:35,588 - __main__ - INFO - Stats: captured_packets=28, sent_packets=28, dropped_packets=0, errors=0, captured_bytes=28, sent_bytes=28, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=28 | 11.52 pps, 0.00 Mbps
+2026-03-23 22:31:37,442 - __main__ - INFO - Stats: captured_packets=35, sent_packets=35, dropped_packets=0, errors=0, captured_bytes=35, sent_bytes=35, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=35 | 3.77 pps, 0.00 Mbps
+2026-03-23 22:31:38,448 - __main__ - INFO - Stats: captured_packets=38, sent_packets=38, dropped_packets=0, errors=0, captured_bytes=38, sent_bytes=38, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=38 | 2.98 pps, 0.00 Mbps
+2026-03-23 22:31:39,565 - __main__ - INFO - Stats: captured_packets=47, sent_packets=47, dropped_packets=0, errors=0, captured_bytes=47, sent_bytes=47, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=47 | 8.06 pps, 0.00 Mbps
+2026-03-23 22:31:40,392 - __main__ - INFO - Ctrl+C received. Shutting down passthrough engine.
+2026-03-23 22:31:40,395 - __main__ - INFO - WinDivert handle closed successfully.
+2026-03-23 22:31:40,395 - __main__ - INFO - Passthrough engine stopped.
+2026-03-23 22:37:20,611 - root - INFO - Logging initialized with level DEBUG to directory ./logs
+2026-03-23 22:37:20,611 - __main__ - INFO - Starting WinDivert ctypes smoke test.
+2026-03-23 22:37:20,614 - __main__ - DEBUG - Local WinDivert.dll not found, trying system PATH.
+2026-03-23 22:37:20,616 - __main__ - CRITICAL - WinDivert.dll not found in local './windivert/' directory or in system PATH.
+2026-03-23 22:37:20,616 - __main__ - CRITICAL - WinDivert (ctypes) smoke test failed: WinDivert.dll not found. Please download the latest WinDivert-x64.zip, create a './windivert' directory, and place WinDivert.dll and WinDivert64.sys inside.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_ctypes.py", line 36, in _load_dll
+    self._windivert_dll = ctypes.WinDLL("WinDivert.dll")
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vmudd\Anaconda3\Lib\ctypes\__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'WinDivert.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\main.py", line 118, in main
+    with WinDivertCtypesDriver(logger=log) as driver:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_ctypes.py", line 19, in __init__
+    self._load_dll()
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_ctypes.py", line 40, in _load_dll
+    raise WinDivertCtypesError(
+nts.windivert_ctypes.WinDivertCtypesError: WinDivert.dll not found. Please download the latest WinDivert-x64.zip, create a './windivert' directory, and place WinDivert.dll and WinDivert64.sys inside.
+2026-03-23 22:56:13,235 - root - INFO - Logging initialized with level DEBUG to directory ./logs
+2026-03-23 22:56:13,238 - __main__ - INFO - Starting WinDivert ctypes smoke test.
+2026-03-23 22:56:13,238 - __main__ - DEBUG - Found WinDivert.dll at local path: D:\study files\6th sem\sockets programs\lab el\windivert\WinDivert.dll
+2026-03-23 22:56:13,314 - __main__ - INFO - Successfully loaded WinDivert.dll from local path.
+2026-03-23 22:56:13,314 - __main__ - INFO - Opening WinDivert handle with filter: 'outbound and tcp and ip'
+2026-03-23 22:56:13,380 - __main__ - INFO - WinDivert handle opened successfully: 580
+2026-03-23 22:56:13,380 - __main__ - INFO - WinDivert (ctypes) opened successfully. Running for 2.0 seconds...
+2026-03-23 22:56:15,381 - __main__ - INFO - WinDivert (ctypes) smoke test duration finished.
+2026-03-23 22:56:15,381 - __main__ - DEBUG - Closing WinDivert handle: 580
+2026-03-23 22:56:15,385 - __main__ - INFO - WinDivert handle 580 closed successfully.
+2026-03-23 22:56:15,385 - __main__ - INFO - WinDivert (ctypes) smoke test succeeded.
+2026-03-24 16:53:34,260 - root - INFO - Logging initialized with level DEBUG to directory ./logs
+2026-03-24 16:53:34,267 - __main__ - INFO - Starting WinDivert ctypes smoke test.
+2026-03-24 16:53:34,269 - __main__ - DEBUG - Found WinDivert.dll at local path: D:\study files\6th sem\sockets programs\lab el\windivert\WinDivert.dll
+2026-03-24 16:53:34,269 - __main__ - INFO - Successfully loaded WinDivert.dll from local path.
+2026-03-24 16:53:34,269 - __main__ - INFO - Opening WinDivert handle with filter: 'outbound and tcp and ip'
+2026-03-24 16:53:34,274 - __main__ - INFO - WinDivert handle opened successfully: 688
+2026-03-24 16:53:34,276 - __main__ - INFO - WinDivert (ctypes) opened successfully. Running for 2.0 seconds...
+2026-03-24 16:53:36,279 - __main__ - INFO - WinDivert (ctypes) smoke test duration finished.
+2026-03-24 16:53:36,279 - __main__ - DEBUG - Closing WinDivert handle: 688
+2026-03-24 16:53:36,281 - __main__ - INFO - WinDivert handle 688 closed successfully.
+2026-03-24 16:53:36,282 - __main__ - INFO - WinDivert (ctypes) smoke test succeeded.

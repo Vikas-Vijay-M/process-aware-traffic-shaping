@@ -46,13 +46,35 @@ This project is a network utility.
 
 ## Usage
 
-### Dry Run (No Administrator Privileges Required)
-To test the application's logging and stats features without performing any network operations, use the `--dry-run` flag.
+### Ctypes Passthrough Mode (Recommended)
+This mode uses `ctypes` for high-performance packet capture and reinjection. It is the recommended mode for most use cases.
 ```bash
-python -m nts.main --dry-run
+# Must be run as Administrator
+python -m nts.main --mode ctypes-passthrough --filter "outbound and tcp.DstPort == 443"
 ```
 
-### Standard Operation (Administrator Privileges Required)
+### Legacy Pydivert Passthrough Mode
+This mode uses the `pydivert` library. It is simpler but may have lower performance.
+```bash
+# Must be run as Administrator
+python -m nts.main --mode passthrough --filter "outbound and tcp.DstPort == 443"
+```
+
+### Smoke Tests
+To verify that the WinDivert driver is installed and accessible.
+```bash
+# Must be run as Administrator
+python -m nts.main --mode windivert-smoke
+python -m nts.main --mode ctypes-smoke
+```
+
+### Dry Run (No Administrator Privileges Required)
+To test the application's logging and stats features without performing any network operations.
+```bash
+python -m nts.main --mode dry-run
+```
+
+### Help
 ```bash
 python -m nts.main --help
 ```

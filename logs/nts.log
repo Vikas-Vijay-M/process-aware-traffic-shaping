@@ -2108,3 +2108,257 @@ nts.windivert_ctypes.WinDivertCtypesError: WinDivert.dll not found. Please downl
 2026-03-24 16:53:36,279 - __main__ - DEBUG - Closing WinDivert handle: 688
 2026-03-24 16:53:36,281 - __main__ - INFO - WinDivert handle 688 closed successfully.
 2026-03-24 16:53:36,282 - __main__ - INFO - WinDivert (ctypes) smoke test succeeded.
+2026-03-24 16:59:00,839 - root - INFO - Logging initialized with level INFO to directory ./logs
+2026-03-24 16:59:00,845 - __main__ - INFO - Starting ctypes-passthrough mode.
+2026-03-24 16:59:00,845 - nts.engine_ctypes - INFO - Successfully loaded WinDivert.dll from local path.
+2026-03-24 16:59:59,399 - root - INFO - Logging initialized with level INFO to directory ./logs
+2026-03-24 16:59:59,399 - __main__ - INFO - Starting ctypes-passthrough mode.
+2026-03-24 16:59:59,409 - nts.engine_ctypes - INFO - Successfully loaded WinDivert.dll from local path.
+2026-03-24 16:59:59,412 - nts.engine_ctypes - INFO - Starting Ctypes Passthrough Engine...
+2026-03-24 16:59:59,412 - nts.engine_ctypes - INFO - Opening WinDivert handle with filter: 'outbound and tcp and ip'
+2026-03-24 16:59:59,412 - nts.engine_ctypes - INFO - WinDivert handle opened successfully: 744
+2026-03-24 17:00:00,932 - nts.engine_ctypes - INFO - WinDivert handle 744 closed successfully.
+2026-03-24 17:00:00,932 - nts.engine_ctypes - CRITICAL - An unexpected error occurred in the engine.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine_ctypes.py", line 23, in run
+    self._main_loop()
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine_ctypes.py", line 63, in _main_loop
+    self.stats.calculate_and_log_rates(self.args.stats_interval)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Stats' object has no attribute 'calculate_and_log_rates'
+2026-03-24 17:00:00,946 - nts.engine_ctypes - INFO - Ctypes Passthrough Engine stopped.
+2026-03-24 17:01:02,829 - root - INFO - Logging initialized with level INFO to directory ./logs
+2026-03-24 17:01:02,829 - __main__ - INFO - Starting ctypes-passthrough mode.
+2026-03-24 17:01:02,829 - nts.engine_ctypes - INFO - Successfully loaded WinDivert.dll from local path.
+2026-03-24 17:01:02,845 - nts.engine_ctypes - INFO - Starting Ctypes Passthrough Engine...
+2026-03-24 17:01:02,846 - nts.engine_ctypes - INFO - Opening WinDivert handle with filter: 'outbound and tcp and ip'
+2026-03-24 17:01:02,848 - nts.engine_ctypes - INFO - WinDivert handle opened successfully: 692
+2026-03-24 17:01:03,958 - nts.stats - INFO - Rates: Capture=2.00 pps (1.00 Mbps), Send=2.00 pps (1.00 Mbps)
+2026-03-24 17:01:03,958 - nts.stats - INFO - Stats: captured_packets=2, sent_packets=2, dropped_packets=0, errors=0, captured_bytes=131070, sent_bytes=131070, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=0
+2026-03-24 17:01:05,066 - nts.stats - INFO - Rates: Capture=13.00 pps (6.50 Mbps), Send=13.00 pps (6.50 Mbps)
+2026-03-24 17:01:05,066 - nts.stats - INFO - Stats: captured_packets=15, sent_packets=15, dropped_packets=0, errors=0, captured_bytes=983025, sent_bytes=983025, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=0
+2026-03-24 17:01:09,406 - nts.stats - INFO - Rates: Capture=3.00 pps (1.50 Mbps), Send=3.00 pps (1.50 Mbps)
+2026-03-24 17:01:09,406 - nts.stats - INFO - Stats: captured_packets=18, sent_packets=18, dropped_packets=0, errors=0, captured_bytes=1179630, sent_bytes=1179630, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=0
+2026-03-24 17:01:09,406 - nts.engine_ctypes - INFO - Run time of 5.0 seconds finished.
+2026-03-24 17:01:09,409 - nts.engine_ctypes - INFO - WinDivert handle 692 closed successfully.
+2026-03-24 17:01:09,411 - nts.engine_ctypes - INFO - Ctypes Passthrough Engine stopped.
+2026-03-24 17:01:09,411 - nts.stats - INFO - Final Statistics:
+2026-03-24 17:01:09,411 - nts.stats - INFO - Stats: captured_packets=18, sent_packets=18, dropped_packets=0, errors=0, captured_bytes=1179630, sent_bytes=1179630, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=0
+2026-03-24 17:01:09,411 - nts.stats - INFO - Average Capture Rate: 2.73 pps (1.37 Mbps) over 6.58s
+2026-03-24 17:03:40,325 - root - INFO - Logging initialized with level DEBUG to directory ./logs
+2026-03-24 17:03:40,342 - __main__ - INFO - Starting ctypes-passthrough mode.
+2026-03-24 17:03:40,343 - nts.engine_ctypes - DEBUG - Found WinDivert.dll at local path: D:\study files\6th sem\sockets programs\lab el\windivert\WinDivert.dll
+2026-03-24 17:03:40,343 - nts.engine_ctypes - INFO - Successfully loaded WinDivert.dll from local path.
+2026-03-24 17:03:40,343 - nts.engine_ctypes - INFO - Starting Ctypes Passthrough Engine...
+2026-03-24 17:03:40,343 - nts.engine_ctypes - INFO - Opening WinDivert handle with filter: 'outbound and tcp and ip'
+2026-03-24 17:03:40,352 - nts.engine_ctypes - INFO - WinDivert handle opened successfully: 396
+2026-03-24 17:03:40,390 - nts.engine_ctypes - DEBUG - Recv packet: len=851322727, first_byte=0x45
+2026-03-24 17:03:40,397 - nts.engine_ctypes - DEBUG - Closing WinDivert handle: 396
+2026-03-24 17:03:40,397 - nts.engine_ctypes - INFO - WinDivert handle 396 closed successfully.
+2026-03-24 17:03:40,397 - nts.engine_ctypes - CRITICAL - An unexpected error occurred in the engine.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine_ctypes.py", line 23, in run
+    self._main_loop()
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine_ctypes.py", line 51, in _main_loop
+    sent_len = self.driver.send(packet, addr)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_ctypes.py", line 162, in send
+    success = self.WinDivertSend(
+              ^^^^^^^^^^^^^^^^^^^
+TypeError: this function takes 4 arguments (5 given)
+2026-03-24 17:03:40,397 - nts.engine_ctypes - INFO - Ctypes Passthrough Engine stopped.
+2026-03-24 17:03:40,397 - nts.stats - INFO - Final Statistics:
+2026-03-24 17:03:40,397 - nts.stats - INFO - Stats: captured_packets=1, sent_packets=0, dropped_packets=0, errors=0, captured_bytes=851322727, sent_bytes=0, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=0
+2026-03-24 17:03:40,397 - nts.stats - INFO - Average Capture Rate: 18.64 pps (121078.62 Mbps) over 0.05s
+2026-03-24 17:04:19,519 - root - INFO - Logging initialized with level DEBUG to directory ./logs
+2026-03-24 17:04:19,534 - __main__ - INFO - Starting ctypes-passthrough mode.
+2026-03-24 17:04:19,534 - nts.engine_ctypes - DEBUG - Found WinDivert.dll at local path: D:\study files\6th sem\sockets programs\lab el\windivert\WinDivert.dll
+2026-03-24 17:04:19,534 - nts.engine_ctypes - INFO - Successfully loaded WinDivert.dll from local path.
+2026-03-24 17:04:19,534 - nts.engine_ctypes - INFO - Starting Ctypes Passthrough Engine...
+2026-03-24 17:04:19,534 - nts.engine_ctypes - INFO - Opening WinDivert handle with filter: 'outbound and tcp and ip'
+2026-03-24 17:04:19,534 - nts.engine_ctypes - INFO - WinDivert handle opened successfully: 700
+2026-03-24 17:04:20,462 - nts.engine_ctypes - DEBUG - Recv packet: len=1251993507, first_byte=0x45
+2026-03-24 17:04:20,463 - nts.engine_ctypes - DEBUG - Closing WinDivert handle: 700
+2026-03-24 17:04:20,465 - nts.engine_ctypes - INFO - WinDivert handle 700 closed successfully.
+2026-03-24 17:04:20,465 - nts.engine_ctypes - CRITICAL - An unexpected error occurred in the engine.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine_ctypes.py", line 23, in run
+    self._main_loop()
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine_ctypes.py", line 51, in _main_loop
+    sent_len = self.driver.send(packet, addr)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_ctypes.py", line 162, in send
+    success = self.WinDivertSend(
+              ^^^^^^^^^^^^^^^^^^^
+TypeError: this function takes 4 arguments (5 given)
+2026-03-24 17:04:20,465 - nts.engine_ctypes - INFO - Ctypes Passthrough Engine stopped.
+2026-03-24 17:04:20,465 - nts.stats - INFO - Final Statistics:
+2026-03-24 17:04:20,465 - nts.stats - INFO - Stats: captured_packets=1, sent_packets=0, dropped_packets=0, errors=0, captured_bytes=1251993507, sent_bytes=0, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=0
+2026-03-24 17:04:20,465 - nts.stats - INFO - Average Capture Rate: 1.07 pps (10250.90 Mbps) over 0.93s
+2026-03-24 17:05:10,406 - root - INFO - Logging initialized with level DEBUG to directory ./logs
+2026-03-24 17:05:10,409 - __main__ - INFO - Starting ctypes-passthrough mode.
+2026-03-24 17:05:10,409 - nts.engine_ctypes - DEBUG - Found WinDivert.dll at local path: D:\study files\6th sem\sockets programs\lab el\windivert\WinDivert.dll
+2026-03-24 17:05:10,409 - nts.engine_ctypes - INFO - Successfully loaded WinDivert.dll from local path.
+2026-03-24 17:05:10,409 - nts.engine_ctypes - INFO - Starting Ctypes Passthrough Engine...
+2026-03-24 17:05:10,409 - nts.engine_ctypes - INFO - Opening WinDivert handle with filter: 'outbound and tcp and ip'
+2026-03-24 17:05:10,409 - nts.engine_ctypes - INFO - WinDivert handle opened successfully: 764
+2026-03-24 17:05:10,417 - nts.engine_ctypes - DEBUG - Recv packet: len=1751602438, first_byte=0x45
+2026-03-24 17:05:10,417 - nts.engine_ctypes - DEBUG - Closing WinDivert handle: 764
+2026-03-24 17:05:10,417 - nts.engine_ctypes - INFO - WinDivert handle 764 closed successfully.
+2026-03-24 17:05:10,417 - nts.engine_ctypes - CRITICAL - An unexpected error occurred in the engine.
+Traceback (most recent call last):
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine_ctypes.py", line 23, in run
+    self._main_loop()
+  File "D:\study files\6th sem\sockets programs\lab el\nts\engine_ctypes.py", line 51, in _main_loop
+    sent_len = self.driver.send(packet, addr)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\study files\6th sem\sockets programs\lab el\nts\windivert_ctypes.py", line 162, in send
+    success = self.WinDivertSend(
+              ^^^^^^^^^^^^^^^^^^^
+TypeError: this function takes 4 arguments (5 given)
+2026-03-24 17:05:10,417 - nts.engine_ctypes - INFO - Ctypes Passthrough Engine stopped.
+2026-03-24 17:05:10,417 - nts.stats - INFO - Final Statistics:
+2026-03-24 17:05:10,417 - nts.stats - INFO - Stats: captured_packets=1, sent_packets=0, dropped_packets=0, errors=0, captured_bytes=1751602438, sent_bytes=0, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=0
+2026-03-24 17:05:10,417 - nts.stats - INFO - Average Capture Rate: 133.03 pps (1777712.59 Mbps) over 0.01s
+2026-03-24 17:05:56,155 - root - INFO - Logging initialized with level DEBUG to directory ./logs
+2026-03-24 17:05:56,161 - __main__ - INFO - Starting ctypes-passthrough mode.
+2026-03-24 17:05:56,161 - nts.engine_ctypes - DEBUG - Found WinDivert.dll at local path: D:\study files\6th sem\sockets programs\lab el\windivert\WinDivert.dll
+2026-03-24 17:05:56,161 - nts.engine_ctypes - INFO - Successfully loaded WinDivert.dll from local path.
+2026-03-24 17:07:45,949 - root - INFO - Logging initialized with level DEBUG to directory ./logs
+2026-03-24 17:07:45,968 - __main__ - INFO - Starting ctypes-passthrough mode.
+2026-03-24 17:07:45,973 - nts.engine_ctypes - DEBUG - Found WinDivert.dll at local path: D:\study files\6th sem\sockets programs\lab el\windivert\WinDivert.dll
+2026-03-24 17:07:46,014 - nts.engine_ctypes - INFO - Successfully loaded WinDivert.dll from local path.
+2026-03-24 17:07:46,018 - nts.engine_ctypes - INFO - Starting Ctypes Passthrough Engine...
+2026-03-24 17:07:46,018 - nts.engine_ctypes - INFO - Opening WinDivert handle with filter: 'outbound and tcp and ip'
+2026-03-24 17:07:46,018 - nts.engine_ctypes - INFO - WinDivert handle opened successfully: 736
+2026-03-24 17:07:46,880 - nts.engine_ctypes - DEBUG - Recv packet: len=3316294284, first_byte=0x45
+2026-03-24 17:07:47,229 - nts.engine_ctypes - DEBUG - Recv packet: len=3319704147, first_byte=0x45
+2026-03-24 17:07:47,229 - nts.stats - INFO - Rates: Capture=2.00 pps (50628.65 Mbps), Send=2.00 pps (50628.65 Mbps)
+2026-03-24 17:07:47,229 - nts.stats - INFO - Stats: captured_packets=2, sent_packets=2, dropped_packets=0, errors=0, captured_bytes=6635998431, sent_bytes=6635998431, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=0
+2026-03-24 17:07:47,534 - nts.engine_ctypes - DEBUG - Recv packet: len=3322710238, first_byte=0x45
+2026-03-24 17:07:47,715 - nts.engine_ctypes - DEBUG - Recv packet: len=3324584640, first_byte=0x45
+2026-03-24 17:07:48,992 - nts.engine_ctypes - DEBUG - Recv packet: len=3337290944, first_byte=0x45
+2026-03-24 17:07:48,995 - nts.stats - INFO - Rates: Capture=3.00 pps (76176.34 Mbps), Send=3.00 pps (76176.34 Mbps)
+2026-03-24 17:07:48,995 - nts.stats - INFO - Stats: captured_packets=5, sent_packets=5, dropped_packets=0, errors=0, captured_bytes=16620584253, sent_bytes=16620584253, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=0
+2026-03-24 17:07:50,772 - nts.stats - INFO - Rates: Capture=3.00 pps (76605.77 Mbps), Send=3.00 pps (76605.77 Mbps)
+2026-03-24 17:07:50,772 - nts.stats - INFO - Stats: captured_packets=8, sent_packets=8, dropped_packets=0, errors=0, captured_bytes=26661455314, sent_bytes=26661455314, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=0
+2026-03-24 17:07:51,070 - nts.engine_ctypes - INFO - Run time of 5.0 seconds finished.
+2026-03-24 17:07:51,070 - nts.engine_ctypes - DEBUG - Closing WinDivert handle: 736
+2026-03-24 17:07:51,070 - nts.engine_ctypes - INFO - WinDivert handle 736 closed successfully.
+2026-03-24 17:07:51,070 - nts.engine_ctypes - INFO - Ctypes Passthrough Engine stopped.
+2026-03-24 17:07:51,070 - nts.stats - INFO - Final Statistics:
+2026-03-24 17:07:51,077 - nts.stats - INFO - Stats: captured_packets=12, sent_packets=12, dropped_packets=0, errors=0, captured_bytes=40090288999, sent_bytes=40090288999, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=0
+2026-03-24 17:07:51,077 - nts.stats - INFO - Average Capture Rate: 2.35 pps (59929.22 Mbps) over 5.10s
+2026-03-24 17:17:47,483 - root - INFO - Logging initialized with level DEBUG to directory ./logs
+2026-03-24 17:17:47,488 - __main__ - INFO - Starting ctypes-passthrough mode.
+2026-03-24 17:17:47,488 - nts.engine_ctypes - DEBUG - Found WinDivert.dll at local path: D:\study files\6th sem\sockets programs\lab el\windivert\WinDivert.dll
+2026-03-24 17:17:47,488 - nts.engine_ctypes - INFO - Successfully loaded WinDivert.dll from local path.
+2026-03-24 17:17:47,488 - nts.engine_ctypes - INFO - Starting Ctypes Passthrough Engine...
+2026-03-24 17:17:47,488 - nts.engine_ctypes - INFO - Opening WinDivert handle with filter: 'outbound and tcp and ip'
+2026-03-24 17:17:47,496 - nts.engine_ctypes - INFO - WinDivert handle opened successfully: 704
+2026-03-24 17:17:47,848 - nts.engine_ctypes - DEBUG - Recv packet: len=736045405, first_byte=0x45
+2026-03-24 17:17:48,826 - nts.engine_ctypes - DEBUG - Recv packet: len=745695568, first_byte=0x45
+2026-03-24 17:17:48,828 - nts.stats - INFO - Rates: Capture=2.00 pps (11304.79 Mbps), Send=2.00 pps (11304.79 Mbps)
+2026-03-24 17:17:48,828 - nts.stats - INFO - Stats: captured_packets=2, sent_packets=2, dropped_packets=0, errors=0, captured_bytes=1481740973, sent_bytes=1481740973, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=0
+2026-03-24 17:17:48,858 - nts.engine_ctypes - DEBUG - Recv packet: len=746005775, first_byte=0x45
+2026-03-24 17:17:48,859 - nts.engine_ctypes - DEBUG - Recv packet: len=746010169, first_byte=0x45
+2026-03-24 17:17:48,870 - nts.engine_ctypes - DEBUG - Recv packet: len=746138187, first_byte=0x45
+2026-03-24 17:17:49,877 - nts.stats - INFO - Rates: Capture=12.00 pps (68714.10 Mbps), Send=12.00 pps (68714.10 Mbps)
+2026-03-24 17:17:49,877 - nts.stats - INFO - Stats: captured_packets=14, sent_packets=14, dropped_packets=0, errors=0, captured_bytes=10488235527, sent_bytes=10488235527, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=0
+2026-03-24 17:17:50,981 - nts.stats - INFO - Rates: Capture=4.00 pps (23244.02 Mbps), Send=4.00 pps (23244.02 Mbps)
+2026-03-24 17:17:50,981 - nts.stats - INFO - Stats: captured_packets=18, sent_packets=18, dropped_packets=0, errors=0, captured_bytes=13534876222, sent_bytes=13534876222, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=0
+2026-03-24 17:17:52,134 - nts.stats - INFO - Rates: Capture=4.00 pps (23649.48 Mbps), Send=4.00 pps (23649.48 Mbps)
+2026-03-24 17:17:52,136 - nts.stats - INFO - Stats: captured_packets=22, sent_packets=22, dropped_packets=0, errors=0, captured_bytes=16634661243, sent_bytes=16634661243, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=0
+2026-03-24 17:17:52,647 - nts.engine_ctypes - INFO - Run time of 5.0 seconds finished.
+2026-03-24 17:17:52,648 - nts.engine_ctypes - DEBUG - Closing WinDivert handle: 704
+2026-03-24 17:17:52,651 - nts.engine_ctypes - INFO - WinDivert handle 704 closed successfully.
+2026-03-24 17:17:52,651 - nts.engine_ctypes - INFO - Ctypes Passthrough Engine stopped.
+2026-03-24 17:17:52,651 - nts.stats - INFO - Final Statistics:
+2026-03-24 17:17:52,651 - nts.stats - INFO - Stats: captured_packets=25, sent_packets=25, dropped_packets=0, errors=0, captured_bytes=18979693553, sent_bytes=18979693553, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=0
+2026-03-24 17:17:52,651 - nts.stats - INFO - Average Capture Rate: 4.84 pps (28049.41 Mbps) over 5.16s
+2026-03-24 17:20:09,453 - root - INFO - Logging initialized with level DEBUG to directory ./logs
+2026-03-24 17:20:09,457 - __main__ - INFO - Starting ctypes-passthrough mode.
+2026-03-24 17:20:09,457 - nts.engine_ctypes - DEBUG - Found WinDivert.dll at local path: D:\study files\6th sem\sockets programs\lab el\windivert\WinDivert.dll
+2026-03-24 17:20:09,457 - nts.engine_ctypes - INFO - Successfully loaded WinDivert.dll from local path.
+2026-03-24 17:20:09,464 - nts.engine_ctypes - INFO - Starting Ctypes Passthrough Engine...
+2026-03-24 17:20:09,464 - nts.engine_ctypes - INFO - Opening WinDivert handle with filter: 'outbound and tcp and ip'
+2026-03-24 17:20:09,465 - nts.engine_ctypes - INFO - WinDivert handle opened successfully: 624
+2026-03-24 17:20:10,834 - nts.engine_ctypes - DEBUG - Recv packet: len=2165781595, first_byte=0x45
+2026-03-24 17:20:10,834 - nts.stats - INFO - Rates: Capture=1.00 pps (16523.60 Mbps), Send=1.00 pps (16523.60 Mbps)
+2026-03-24 17:20:10,834 - nts.stats - INFO - Stats: captured_packets=1, sent_packets=1, dropped_packets=0, errors=0, captured_bytes=2165781595, sent_bytes=2165781595, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=0
+2026-03-24 17:20:10,894 - nts.engine_ctypes - DEBUG - Recv packet: len=2166380302, first_byte=0x45
+2026-03-24 17:20:10,974 - nts.engine_ctypes - DEBUG - Recv packet: len=2167171483, first_byte=0x45
+2026-03-24 17:20:11,055 - nts.engine_ctypes - DEBUG - Recv packet: len=2167988452, first_byte=0x45
+2026-03-24 17:20:11,093 - nts.engine_ctypes - DEBUG - Recv packet: len=2168440396, first_byte=0x45
+2026-03-24 17:20:12,058 - nts.stats - INFO - Rates: Capture=13.00 pps (215373.06 Mbps), Send=13.00 pps (215373.06 Mbps)
+2026-03-24 17:20:12,062 - nts.stats - INFO - Stats: captured_packets=14, sent_packets=14, dropped_packets=0, errors=0, captured_bytes=30395158856, sent_bytes=30395158856, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=0
+2026-03-24 17:20:13,076 - nts.stats - INFO - Rates: Capture=5.00 pps (83224.25 Mbps), Send=5.00 pps (83224.25 Mbps)
+2026-03-24 17:20:13,076 - nts.stats - INFO - Stats: captured_packets=19, sent_packets=19, dropped_packets=0, errors=0, captured_bytes=41303527763, sent_bytes=41303527763, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=0
+2026-03-24 17:20:14,224 - nts.stats - INFO - Rates: Capture=12.00 pps (200770.81 Mbps), Send=12.00 pps (200770.81 Mbps)
+2026-03-24 17:20:14,224 - nts.stats - INFO - Stats: captured_packets=31, sent_packets=31, dropped_packets=0, errors=0, captured_bytes=67618959270, sent_bytes=67618959270, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=0
+2026-03-24 17:20:14,529 - nts.engine_ctypes - INFO - Run time of 5.0 seconds finished.
+2026-03-24 17:20:14,529 - nts.engine_ctypes - DEBUG - Closing WinDivert handle: 624
+2026-03-24 17:20:14,532 - nts.engine_ctypes - INFO - WinDivert handle 624 closed successfully.
+2026-03-24 17:20:14,532 - nts.engine_ctypes - INFO - Ctypes Passthrough Engine stopped.
+2026-03-24 17:20:14,532 - nts.stats - INFO - Final Statistics:
+2026-03-24 17:20:14,532 - nts.stats - INFO - Stats: captured_packets=33, sent_packets=33, dropped_packets=0, errors=0, captured_bytes=72021681779, sent_bytes=72021681779, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=0
+2026-03-24 17:20:14,532 - nts.stats - INFO - Average Capture Rate: 6.50 pps (108279.86 Mbps) over 5.07s
+2026-03-24 17:24:49,338 - root - INFO - Logging initialized with level DEBUG to directory ./logs
+2026-03-24 17:24:49,343 - __main__ - INFO - Starting ctypes-passthrough mode.
+2026-03-24 17:24:49,343 - nts.engine_ctypes - DEBUG - Found WinDivert.dll at local path: D:\study files\6th sem\sockets programs\lab el\windivert\WinDivert.dll
+2026-03-24 17:24:49,343 - nts.engine_ctypes - INFO - Successfully loaded WinDivert.dll from local path.
+2026-03-24 17:24:49,343 - nts.engine_ctypes - INFO - Starting Ctypes Passthrough Engine...
+2026-03-24 17:24:49,343 - nts.engine_ctypes - INFO - Opening WinDivert handle with filter: 'outbound and tcp and ip'
+2026-03-24 17:24:49,343 - nts.engine_ctypes - INFO - WinDivert handle opened successfully: 468
+2026-03-24 17:24:50,584 - nts.engine_ctypes - ERROR - Packet capture/send error: WinDivertRecv returned invalid length: 668309536 (bufsize=65535)
+2026-03-24 17:24:50,785 - nts.engine_ctypes - ERROR - Packet capture/send error: WinDivertRecv returned invalid length: 670428413 (bufsize=65535)
+2026-03-24 17:24:50,785 - nts.engine_ctypes - ERROR - Packet capture/send error: WinDivertRecv returned invalid length: 670434405 (bufsize=65535)
+2026-03-24 17:24:51,044 - nts.engine_ctypes - ERROR - Packet capture/send error: WinDivertRecv returned invalid length: 672913272 (bufsize=65535)
+2026-03-24 17:24:51,292 - nts.engine_ctypes - ERROR - Packet capture/send error: WinDivertRecv returned invalid length: 675391020 (bufsize=65535)
+2026-03-24 17:24:51,600 - nts.engine_ctypes - ERROR - Packet capture/send error: WinDivertRecv returned invalid length: 678472632 (bufsize=65535)
+2026-03-24 17:24:51,714 - nts.engine_ctypes - ERROR - Packet capture/send error: WinDivertRecv returned invalid length: 679615146 (bufsize=65535)
+2026-03-24 17:24:51,800 - nts.engine_ctypes - ERROR - Packet capture/send error: WinDivertRecv returned invalid length: 680472553 (bufsize=65535)
+2026-03-24 17:24:51,801 - nts.engine_ctypes - ERROR - Packet capture/send error: WinDivertRecv returned invalid length: 680473188 (bufsize=65535)
+2026-03-24 17:24:52,138 - nts.engine_ctypes - ERROR - Packet capture/send error: WinDivertRecv returned invalid length: 683889965 (bufsize=65535)
+2026-03-24 17:24:52,203 - nts.engine_ctypes - ERROR - Packet capture/send error: WinDivertRecv returned invalid length: 684501635 (bufsize=65535)
+2026-03-24 17:24:52,608 - nts.engine_ctypes - ERROR - Packet capture/send error: WinDivertRecv returned invalid length: 688548349 (bufsize=65535)
+2026-03-24 17:24:53,090 - nts.engine_ctypes - ERROR - Packet capture/send error: WinDivertRecv returned invalid length: 693380445 (bufsize=65535)
+2026-03-24 17:24:53,162 - nts.engine_ctypes - ERROR - Packet capture/send error: WinDivertRecv returned invalid length: 694087367 (bufsize=65535)
+2026-03-24 17:24:53,291 - nts.engine_ctypes - ERROR - Packet capture/send error: WinDivertRecv returned invalid length: 695470923 (bufsize=65535)
+2026-03-24 17:24:53,307 - nts.engine_ctypes - ERROR - Packet capture/send error: WinDivertRecv returned invalid length: 695541150 (bufsize=65535)
+2026-03-24 17:24:53,411 - nts.engine_ctypes - ERROR - Packet capture/send error: WinDivertRecv returned invalid length: 696578436 (bufsize=65535)
+2026-03-24 17:24:53,452 - nts.engine_ctypes - ERROR - Packet capture/send error: WinDivertRecv returned invalid length: 697098368 (bufsize=65535)
+2026-03-24 17:24:53,516 - nts.engine_ctypes - ERROR - Packet capture/send error: WinDivertRecv returned invalid length: 697631762 (bufsize=65535)
+2026-03-24 17:24:53,523 - nts.engine_ctypes - ERROR - Packet capture/send error: WinDivertRecv returned invalid length: 697703483 (bufsize=65535)
+2026-03-24 17:24:53,525 - nts.engine_ctypes - CRITICAL - Exceeded max consecutive errors (20). Stopping.
+2026-03-24 17:24:53,525 - nts.engine_ctypes - DEBUG - Closing WinDivert handle: 468
+2026-03-24 17:24:53,525 - nts.engine_ctypes - INFO - WinDivert handle 468 closed successfully.
+2026-03-24 17:24:53,525 - nts.engine_ctypes - INFO - Ctypes Passthrough Engine stopped.
+2026-03-24 17:24:53,527 - nts.stats - INFO - Final Statistics:
+2026-03-24 17:24:53,528 - nts.stats - INFO - Stats: captured_packets=0, sent_packets=0, dropped_packets=0, errors=20, captured_bytes=0, sent_bytes=0, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=0
+2026-03-24 17:24:53,528 - nts.stats - INFO - Average Capture Rate: 0.00 pps (0.00 Mbps) over 4.19s
+2026-03-24 17:32:05,654 - root - INFO - Logging initialized with level DEBUG to directory ./logs
+2026-03-24 17:32:05,675 - __main__ - INFO - Starting ctypes-passthrough mode.
+2026-03-24 17:32:05,676 - nts.engine_ctypes - INFO - Starting Ctypes Passthrough Engine...
+2026-03-24 17:32:05,676 - nts.engine_ctypes - INFO - Opening WinDivert handle with filter: 'outbound and tcp and ip'
+2026-03-24 17:32:05,700 - nts.engine_ctypes - INFO - WinDivert handle opened successfully: 748
+2026-03-24 17:32:06,093 - nts.engine_ctypes - DEBUG - Recv len=40, first_byte=0x45
+2026-03-24 17:32:06,137 - nts.engine_ctypes - DEBUG - Recv len=46, first_byte=0x45
+2026-03-24 17:32:06,137 - nts.engine_ctypes - DEBUG - Recv len=40, first_byte=0x45
+2026-03-24 17:32:06,137 - nts.engine_ctypes - DEBUG - Recv len=42, first_byte=0x45
+2026-03-24 17:32:06,137 - nts.engine_ctypes - DEBUG - Recv len=40, first_byte=0x45
+2026-03-24 17:32:06,732 - nts.stats - INFO - Rates: Capture=12.00 pps (0.03 Mbps), Send=12.00 pps (0.03 Mbps)
+2026-03-24 17:32:06,732 - nts.stats - INFO - Stats: captured_packets=12, sent_packets=12, dropped_packets=0, errors=0, captured_bytes=3958, sent_bytes=3958, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=0
+2026-03-24 17:32:07,816 - nts.stats - INFO - Rates: Capture=9.00 pps (0.02 Mbps), Send=9.00 pps (0.02 Mbps)
+2026-03-24 17:32:07,816 - nts.stats - INFO - Stats: captured_packets=21, sent_packets=21, dropped_packets=0, errors=0, captured_bytes=7212, sent_bytes=7212, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=0
+2026-03-24 17:32:09,096 - nts.stats - INFO - Rates: Capture=14.00 pps (0.01 Mbps), Send=14.00 pps (0.01 Mbps)
+2026-03-24 17:32:09,096 - nts.stats - INFO - Stats: captured_packets=35, sent_packets=35, dropped_packets=0, errors=0, captured_bytes=8534, sent_bytes=8534, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=0
+2026-03-24 17:32:10,774 - nts.stats - INFO - Rates: Capture=1.00 pps (0.00 Mbps), Send=1.00 pps (0.00 Mbps)
+2026-03-24 17:32:10,780 - nts.stats - INFO - Stats: captured_packets=36, sent_packets=36, dropped_packets=0, errors=0, captured_bytes=8574, sent_bytes=8574, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=0
+2026-03-24 17:32:10,780 - nts.engine_ctypes - INFO - Run time of 5.0 seconds finished.
+2026-03-24 17:32:10,780 - nts.engine_ctypes - DEBUG - Closing WinDivert handle: 748
+2026-03-24 17:32:10,890 - nts.engine_ctypes - INFO - WinDivert handle 748 closed successfully.
+2026-03-24 17:32:10,890 - nts.engine_ctypes - INFO - Ctypes Passthrough Engine stopped.
+2026-03-24 17:32:10,890 - nts.stats - INFO - Final Statistics:
+2026-03-24 17:32:10,890 - nts.stats - INFO - Stats: captured_packets=36, sent_packets=36, dropped_packets=0, errors=0, captured_bytes=8574, sent_bytes=8574, dropped_bytes=0, send_invalid_param_errors=0, skipped_too_small_packets=0
+2026-03-24 17:32:10,890 - nts.stats - INFO - Average Capture Rate: 6.90 pps (0.01 Mbps) over 5.22s

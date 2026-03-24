@@ -9,6 +9,8 @@ from nts.admin import is_admin
 from nts.windivert_iface import WinDivertDriver, WinDivertError
 from nts.windivert_ctypes import WinDivertCtypesDriver, WinDivertCtypesError
 from nts.engine import PassthroughEngine
+from nts.engine_ctypes import CtypesPassthroughEngine
+import threading
 
 def main():
     """Main function."""
@@ -29,7 +31,7 @@ def main():
     )
     parser.add_argument(
         "--mode",
-        choices=["dry-run", "windivert-smoke", "passthrough", "ctypes-smoke"],
+        choices=["dry-run", "windivert-smoke", "passthrough", "ctypes-smoke", "ctypes-passthrough"],
         default="dry-run",
         help="The operation mode.",
     )
@@ -62,6 +64,12 @@ def main():
         default=20,
         help="Number of initial packets to log with full diagnostics.",
     )
+    parser.add_argument(
+        "--bufsize",
+        type=int,
+        default=65535,
+        help="Buffer size for packet capture."
+    )
 
     args = parser.parse_args()
 
@@ -75,7 +83,7 @@ def main():
     log = logging.getLogger(__name__)
 
     # Admin check for modes that require it
-    if args.mode in ["windivert-smoke", "passthrough", "ctypes-smoke"] and not is_admin():
+    if args.mode in ["windivert-smoke", "passthrough", "ctypes-smoke", "ctypes-passthrough"] and not is_admin():
         log.error(f"The '{args.mode}' mode must be run as Administrator.")
         sys.exit(2)
 
@@ -129,6 +137,29 @@ def main():
         except Exception as e:
             log.critical(f"An unexpected error occurred during the ctypes smoke test: {e}", exc_info=True)
             sys.exit(1)
+
+    elif args.mode == "ctypes-passthrough":
+        log.info("Starting ctypes-passthrough mode.")
+        stop_event = threading.Event()
+        engine = CtypesPassthroughEngine(args, stop_event)
+        
+        # Run the engine in a separate thread to allow for graceful shutdown
+        engine_thread = threading.Thread(target=engine.run, daemon=True)
+        engine_thread.start()
+
+        try:
+            # Wait for the thread to finish or for Ctrl+C
+            while engine_thread.is_alive():
+                time.sleep(0.5)
+        except KeyboardInterrupt:
+            log.info("Ctrl+C received. Shutting down gracefully.")
+            engine.stop()
+        
+        engine_thread.join(timeout=5.0) # Wait for the engine thread to stop
+        if engine_thread.is_alive():
+            log.warning("Engine thread did not stop in time.")
+
+        sys.exit(0)
 
     elif args.mode == "passthrough":
         log.info("Starting passthrough mode.")
